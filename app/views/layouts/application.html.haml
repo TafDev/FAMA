@@ -1,0 +1,133 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FAMA
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+  %body
+  / LOADER
+  #loader
+    .loader
+      .position-center-center
+        = image_tag "logo.png"
+        .progress
+          .indeterminate
+  / Page Wrapper
+  #wrap
+    / Top bar
+    .top-bar
+      .container
+        .col-md-6
+          %ul.row
+            %li.margin-right-20
+              %p
+                %i.fa.fa-envelope-o.margin-right-10>
+                famabooths@fama.com
+            %li.margin-right-20
+              %p
+                %i.fa.fa-phone.margin-right-10
+                +01 123 456 78
+            %li
+              %p
+                %i.fa.fa-user.margin-right-10
+                Account
+        / Social Icon
+        .col-md-6.text-right.social-top
+          / Social Icon
+          %ul.social-icons
+            %li
+              %a{:href => "#."}
+                %i.fa.fa-facebook
+            %li
+              %a{:href => "#."}
+                %i.fa.fa-twitter
+            %li
+              %a{:href => "#."}
+                %i.fa.fa-google
+            %li
+              %a{:href => "#."}
+                %i.fa.fa-linkedin
+            %li
+              %a{:href => "#."}
+                %i.fa.fa-dribbble
+    / Header
+    %header.header.coporate-header
+      .sticky
+        .container
+          .logo
+            -#%a{:href => "index.html"}
+            = image_tag "logo.gif", class: 'logo'
+          / Nav
+          %nav
+            %ul#ownmenu.ownmenu
+              %li.active
+                %a{:href => "index.html"} HOME
+              %li
+                %a{:href => "about-us.html"} About
+              %li
+                %a{:href => "services.html"} services
+
+          %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#."} any help?
+    / End Header
+    = yield
+
+/ Footer
+%footer
+  .container
+    .row
+      / About
+      .col-md-4
+        %p Said Californ'y is the place you ought to be So they loaded up the truck and moved to Beverly. Hills that is.
+        / Social Icon
+        %ul.social-icons
+          %li
+            %a{:href => "#."}
+              %i.fa.fa-facebook
+          %li
+            %a{:href => "#."}
+              %i.fa.fa-twitter
+          %li
+            %a{:href => "#."}
+              %i.fa.fa-google
+          %li
+            %a{:href => "#."}
+              %i.fa.fa-linkedin
+          %li
+            %a{:href => "#."}
+              %i.fa.fa-dribbble
+      / Our Services
+      .col-md-4
+        %h5 Our Services
+        %ul.links
+          %li
+            %a{:href => "#."} Wed Design
+          %li
+            %a{:href => "#."} Wed Development
+          %li
+            %a{:href => "#."} SEO Optimization
+      / useful links
+      .col-md-4
+        %h5 useful links
+        %ul.links
+          %li
+            %a{:href => "#."} About us
+          %li
+            %a{:href => "#."} Why Choose Us
+          %li
+            %a{:href => "#."} Our Services
+
+    / Links
+    %ul.bottom-links
+      %li
+        %a{:href => "#."} Home
+      %li
+        %a{:href => "#."} about us
+      %li
+        %a{:href => "#."} services
+    / Rights
+    .rights
+      %p © 2015 All Rights Reserved
+/ End Footer
