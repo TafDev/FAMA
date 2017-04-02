@@ -356,15 +356,15 @@ website:   	http://www.themepunch.com
     text-shadow: none;
   }
   a {
-    color: #ff7302;
+    color: white;
     text-shadow: none;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -o-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
-    &:hover {
-      color: #ffa902;
-    }
+    //&:hover {
+    //  color: #ffa902;
+    //}
   }
 }
 

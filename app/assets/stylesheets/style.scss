@@ -423,14 +423,15 @@ header {
   width: 100%;
   z-index: 999;
   margin-top: 0px;
-  padding-top: 20px;
+  //padding-top: 20px;
   padding-bottom: 10px;
   .logo {
     float: left;
-    position: absolute;
+    //position: absolute;
     text-align: left;
     z-index: 9999;
-    margin-top: 5px;
+    //margin-top: 5px;
+    max-width: 10em
   }
   nav {
     display: inline-block;
@@ -453,7 +454,7 @@ header {
       color: #131313;
       letter-spacing: 2px;
       float: left;
-      font-size: 13px;
+      font-size: 1em;
       font-weight: normal;
       position: relative;
     }
@@ -463,32 +464,34 @@ header {
     li {
       a:hover {
         color: #f34580;
+        background: none;
+        font-size: 1.5em;
       }
       &.active a {
         color: #f34580;
         border-color: transparent;
-        &:after {
-          width: 100%;
-        }
+        //&:after {
+        //  width: 100%;
+        //}
       }
       a {
-        &:hover:after {
-          width: 100%;
-        }
-        &:after {
-          display: block;
-          position: absolute;
-          left: 0;
-          bottom: -10px;
-          width: 0;
-          height: 4px;
-          background-color: #f35188;
-          content: "";
-          -webkit-transition: all 0.2s;
-          -moz-transition: all 0.2s;
-          -o-transition: all 0.2s;
-          transition: all 0.2s;
-        }
+        //&:hover:after {
+        //  width: 100%;
+        //}
+        //&:after {
+        //  display: block;
+        //  position: absolute;
+        //  left: 0;
+        //  bottom: -10px;
+        //  width: 0;
+        //  height: 4px;
+        //  background-color: #f35188;
+        //  content: "";
+        //  -webkit-transition: all 0.2s;
+        //  -moz-transition: all 0.2s;
+        //  -o-transition: all 0.2s;
+        //  transition: all 0.2s;
+        //}
       }
     }
   }
@@ -606,9 +609,10 @@ header {
 .is-sticky .sticky {
   .logo {
     margin-top: 0px;
+    max-width: 8em;
   }
-  padding-top: 10px;
-  padding-bottom: 9px;
+  //padding-top: 10px;
+  //padding-bottom: 9px;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   -webkit-transition: all 0.4s ease-in-out;
@@ -651,6 +655,7 @@ header .is-sticky .sticky nav li a {
   height: 100%;
   position: relative;
   overflow: hidden;
+  max-height: 35em;
 }
 
 .sub-banner {
@@ -2051,6 +2056,10 @@ header .is-sticky .sticky nav li a {
       color: #fff !important;
     }
   }
+}
+
+nav ul li.active {
+  background: none !important;
 }
 
 .large-detail .btn {
