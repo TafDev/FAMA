@@ -87,7 +87,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address => 'smtpout.secureserver.net',
-    :domain  => 'www.famaphotobooths.com',
+    :domain  => 'famaphotobooths.com',
     :port      => 80,
     :user_name => ENV['GD_USERNAME'],
     :password => ENV['GD_PASSWORD'],
