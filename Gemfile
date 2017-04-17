@@ -26,6 +26,8 @@ gem 'ionicons-rails'
 gem 'simple-line-icons-rails'
 gem 'mail_form'
 gem 'figaro'
+gem "letter_opener", :group => :development
+
 
 
 group :development, :test do
