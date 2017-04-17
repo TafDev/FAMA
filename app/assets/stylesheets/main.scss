@@ -1,6 +1,32 @@
 /*=======================================================
 			Page Loader
 ========================================================*/
+.slider .indicators .indicator-item.active {
+  background-color: #794EFD;
+}
+
+.slider .slides li img {
+  background-position: 0 0;
+}
+
+.reduced-price {
+  text-decoration: line-through;
+}
+
+.caption {
+   h3 {
+     color: white;
+     font-size: 5em;
+     font-weight: 500;
+     color: #794EFD;
+   }
+  h5 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #f34580;
+  }
+
+}
 
 #loader {
   position: fixed;
@@ -1371,7 +1397,7 @@ input {
   .owl-video-tn {
     opacity: 0;
     height: 100%;
-    background-position: center center;
+    //background-position: center center;
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     -moz-background-size: contain;

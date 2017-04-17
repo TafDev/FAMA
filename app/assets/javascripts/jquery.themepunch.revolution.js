@@ -1797,7 +1797,7 @@
 
 				if (bgfit==undefined) bgfit="cover";
 				if (bgrepeat==undefined) bgrepeat="no-repeat";
-				if (bgposition==undefined) bgposition="center center"
+				if (bgposition==undefined) bgposition="center center";
 
 
 				var pari = img.closest('.slotholder');

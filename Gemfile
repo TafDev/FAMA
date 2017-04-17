@@ -24,7 +24,8 @@ gem 'materialize-sass'
 gem 'material_icons'
 gem 'ionicons-rails'
 gem 'simple-line-icons-rails'
-
+gem 'mail_form'
+gem 'figaro'
 
 
 group :development, :test do

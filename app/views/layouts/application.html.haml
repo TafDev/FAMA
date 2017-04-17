@@ -9,12 +9,12 @@
 
   %body
   / LOADER
-  #loader
-    .loader
-      .position-center-center
-        = image_tag "logo.png"
-        .progress
-          .indeterminate
+  -##loader
+  -#  .loader
+  -#    .position-center-center
+  -#      = image_tag "logo.png"
+  -#      .progress
+  -#        .indeterminate
   / Page Wrapper
   #wrap
     / Top bar
@@ -29,11 +29,7 @@
             %li.margin-right-20
               %p
                 %i.fa.fa-phone.margin-right-10
-                +01 123 456 78
-            %li
-              %p
-                %i.fa.fa-user.margin-right-10
-                Account
+                  +447500946019
         / Social Icon
         .col-md-6.text-right.social-top
           / Social Icon
@@ -63,14 +59,16 @@
           .col-md-7
             %nav
               %ul#ownmenu.ownmenu
-                %li.active
-                  %a{:href => "index.html"} HOME
                 %li
-                  %a{:href => "about-us.html"} About
+                  = link_to "HOME", root_path
                 %li
-                  %a{:href => "services.html"} services
+                  %a{:href => "#about"} About
+                %li
+                  %a{:href => "#services"} services
+                %li
+                  %a{:href => "#contact"} Contact us
           .col-md-2
-            %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#."} any help?
+            %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
     / End Header
     = yield
 
@@ -80,7 +78,7 @@
     .row
       / About
       .col-md-4
-        %p Said Californ'y is the place you ought to be So they loaded up the truck and moved to Beverly. Hills that is.
+        %p We would like to keep you in the loop as much as we can. You can follow us below:
         / Social Icon
         %ul.social-icons
           %li
@@ -98,36 +96,49 @@
           %li
             %a{:href => "#."}
               %i.fa.fa-dribbble
-      / Our Services
-      .col-md-4
-        %h5 Our Services
-        %ul.links
-          %li
-            %a{:href => "#."} Wed Design
-          %li
-            %a{:href => "#."} Wed Development
-          %li
-            %a{:href => "#."} SEO Optimization
-      / useful links
-      .col-md-4
-        %h5 useful links
-        %ul.links
-          %li
-            %a{:href => "#."} About us
-          %li
-            %a{:href => "#."} Why Choose Us
-          %li
-            %a{:href => "#."} Our Services
+      -#/ Our Services
+      -#.col-md-4
+      -#  %h5 Our Services
+      -#  %ul.links
+      -#    %li
+      -#      %a{:href => "#."} Wed Design
+      -#    %li
+      -#      %a{:href => "#."} Wed Development
+      -#    %li
+      -#      %a{:href => "#."} SEO Optimization
+      -#/ useful links
+      -#.col-md-4
+      -#  %h5 useful links
+      -#  %ul.links
+      -#    %li
+      -#      %a{:href => "#."} About us
+      -#    %li
+      -#      %a{:href => "#."} Why Choose Us
+      -#    %li
+      -#      %a{:href => "#."} Our Services
 
-    / Links
-    %ul.bottom-links
-      %li
-        %a{:href => "#."} Home
-      %li
-        %a{:href => "#."} about us
-      %li
-        %a{:href => "#."} services
+    -#/ Links
+    -#%ul.bottom-links
+    -#  %li
+    -#    %a{:href => "#."} Home
+    -#  %li
+    -#    %a{:href => "#."} about us
+    -#  %li
+    -#    %a{:href => "#."} services
     / Rights
     .rights
-      %p © 2015 All Rights Reserved
+      %p © 2017 Famabooths
 / End Footer
+:javascript
+  $(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+      e.preventDefault();
+
+      var target = this.hash;
+      var $target = $(target);
+
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+      }, 900, 'swing');
+    });
+  });
