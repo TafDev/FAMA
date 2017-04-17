@@ -86,11 +86,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => 'smtpout.secureserver.net',
-    :domain  => 'famaphotobooths.com',
-    :port      => 80,
-    :user_name => ENV['GD_USERNAME'],
-    :password => ENV['GD_PASSWORD'],
-    :authentication => :plain
+    :address        => 'smtp.office365.com',
+    :port           => '587',
+    :authentication => :login,
+    :user_name      => ENV['SMTP_USERNAME'],
+    :password       => ENV['SMTP_PASSWORD'],
+    :domain         => 'famaphotobooths.com',
+    :enable_starttls_auto => true
   }
 end
