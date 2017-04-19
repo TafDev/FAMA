@@ -3,6 +3,9 @@ class Contact < MailForm::Base
   attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :message
   attribute :subject
+  attribute :phone
+  attribute :occasion
+  attribute :date
   attribute :nickname,  :captcha  => true
 
   def headers
@@ -13,4 +16,5 @@ class Contact < MailForm::Base
   end
 
   SUBJECTS = ["Silver", "Gold", "Platinum", "General questions", "Other"]
+  OCCASIONS = ["Wedding", "Birthday", "Corporate", "Seasonal", "Charity", "Prom", "Other"]
 end

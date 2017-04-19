@@ -20,9 +20,17 @@
 
           %ul.row
             %li.col-sm-4
-              = f.text_field :name, placeholder: "Name", class: "form-control", required: true
+              = f.text_field :name, placeholder: "Full Name", class: "form-control", required: true
             %li.col-sm-4
               = f.email_field :email, placeholder: "Email", class: "form-control", required: true
+            %li.col-sm-4
+              = f.number_field :phone, placeholder: "Phone Number", class: "form-control"
+            %li.col-sm-4
+              = f.date_field :date, class: "datepicker form-control", placeholder: "Pick a date"
+            %li.col-sm-4
+              .form-control
+                .input-field
+                  = f.select :occasion, options_for_select(Contact::OCCASIONS), :include_blank => "Select Your Occasion"
             %li.col-sm-4
               .form-control
                 .input-field
@@ -35,4 +43,9 @@
 :javascript
   $(document).ready(function() {
     $('select').material_select();
+  });
+
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
   });

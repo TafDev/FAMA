@@ -656,6 +656,12 @@ header .is-sticky .sticky nav li a {
   position: relative;
   overflow: hidden;
   max-height: 35em;
+  li {
+     background-color: #000000;
+  }
+  img {
+    opacity: 0.5;
+  }
 }
 
 .sub-banner {
