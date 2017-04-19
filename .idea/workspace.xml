@@ -26,13 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2821f0f3-7f97-4907-ac89-563c9962ebf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FAMA.iml" afterPath="$PROJECT_DIR$/.idea/FAMA.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/contact.rb" afterPath="$PROJECT_DIR$/app/models/contact.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_contact.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_contact.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_packages.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_packages.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_slider.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_slider.html.haml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -100,10 +93,10 @@
       <file leaf-file-name="_slider.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="150">
+              <caret line="10" column="24" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="10" selection-end-column="24" />
               <folding>
-                <marker date="1492641777000" expanded="true" signature="956:988" ph="{...}" />
+                <marker date="1492642181000" expanded="true" signature="957:989" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -751,12 +744,12 @@
       <workItem from="1492164638808" duration="7308000" />
       <workItem from="1492184124302" duration="30273000" />
       <workItem from="1492503952960" duration="4000" />
-      <workItem from="1492634203527" duration="4349000" />
+      <workItem from="1492634203527" duration="4560000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69714000" />
+    <option name="totallyTimeSpent" value="69925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1139,10 +1132,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        <state relative-caret-position="150">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="5" selection-start-column="5" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <marker date="1492641777000" expanded="true" signature="956:988" ph="{...}" />
+            <marker date="1492642181000" expanded="true" signature="957:989" ph="{...}" />
           </folding>
         </state>
       </provider>
