@@ -26,12 +26,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2821f0f3-7f97-4907-ac89-563c9962ebf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/home.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/contacts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_contact.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_contact.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -109,12 +103,12 @@
       <file leaf-file-name="application.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="79" column="14" lean-forward="false" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+            <state relative-caret-position="195">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="50" selection-end-column="35" />
               <folding>
-                <marker date="1492965014000" expanded="true" signature="3828:4083" ph="{...}" />
-                <marker date="1492965014000" expanded="true" signature="3876:4077" ph="{...}" />
-                <marker date="1492965014000" expanded="true" signature="4004:4055" ph="{...}" />
+                <marker date="1492965234000" expanded="true" signature="4862:5117" ph="{...}" />
+                <marker date="1492965234000" expanded="true" signature="4910:5111" ph="{...}" />
+                <marker date="1492965234000" expanded="true" signature="5038:5089" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -693,12 +687,12 @@
       <workItem from="1492184124302" duration="30273000" />
       <workItem from="1492503952960" duration="4000" />
       <workItem from="1492634203527" duration="5206000" />
-      <workItem from="1492943105370" duration="6484000" />
+      <workItem from="1492943105370" duration="6688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77055000" />
+    <option name="totallyTimeSpent" value="77259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1090,12 +1084,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="79" column="14" lean-forward="false" selection-start-line="79" selection-start-column="14" selection-end-line="79" selection-end-column="14" />
+        <state relative-caret-position="195">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="50" selection-end-column="35" />
           <folding>
-            <marker date="1492965014000" expanded="true" signature="3828:4083" ph="{...}" />
-            <marker date="1492965014000" expanded="true" signature="3876:4077" ph="{...}" />
-            <marker date="1492965014000" expanded="true" signature="4004:4055" ph="{...}" />
+            <marker date="1492965234000" expanded="true" signature="4862:5117" ph="{...}" />
+            <marker date="1492965234000" expanded="true" signature="4910:5111" ph="{...}" />
+            <marker date="1492965234000" expanded="true" signature="5038:5089" ph="{...}" />
           </folding>
         </state>
       </provider>
