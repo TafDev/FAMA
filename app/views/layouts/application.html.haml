@@ -25,7 +25,7 @@
             %li.margin-right-20
               %p
                 %i.fa.fa-envelope-o.margin-right-10>
-                info@famabooths.com
+                enquiries@famaphotobooths.com
             %li.margin-right-20
               %p
                 %i.fa.fa-phone.margin-right-10
@@ -70,6 +70,14 @@
           .col-md-2
             %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
     / End Header
+
+    - flash.each do |key, value|
+      %div{:id => "card-alert", :class => "card #{key}"}
+        .card-content.white-text
+          = value
+          %button.close.white-text{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+            %span.white-text{"aria-hidden" => "true", :onclick => "this.parentElement.parentElement.style.display='none';"} ×
+
     = yield
 
 / Footer

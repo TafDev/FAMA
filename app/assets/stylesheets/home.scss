@@ -9,3 +9,38 @@
     color: grey;
   }
 }
+
+#card-alert {
+  position: absolute;
+  width: 60%;
+  z-index: 1001;
+  vertical-align: middle;
+  opacity: 0.7;
+  right: 20px;
+  .close {
+    opacity: 1 !important;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.picker__date-display {
+  background-color: #673AB7;
+}
+
+.picker__weekday-display {
+  background-color: #673AB7;
+}
+
+.picker__day.picker__day--today {
+  color: #673AB7;
+}
+
+.picker__close, .picker__today {
+  color: #673AB7;
+}
+
+.picker__day--selected:hover, .picker--focused .picker__day--selected {
+  background-color: #673AB7;
+}
