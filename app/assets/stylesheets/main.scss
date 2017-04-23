@@ -1510,13 +1510,13 @@ input {
         width: 100%;
         text-align: left;
       }
-      .caret {
-        position: absolute;
-        top: 50%;
-        right: 12px;
-        margin-top: -2px;
-        vertical-align: middle;
-      }
+      //.caret {
+      //  position: absolute;
+      //  top: 50%;
+      //  right: 12px;
+      //  margin-top: -2px;
+      //  vertical-align: middle;
+      //}
     }
     &[class*=col-] .dropdown-toggle {
       width: 100%;
@@ -1593,11 +1593,11 @@ input {
       .filter-option {
         position: static;
       }
-      .caret {
-        position: static;
-        top: auto;
-        margin-top: -1px;
-      }
+      //.caret {
+      //  position: static;
+      //  top: auto;
+      //  margin-top: -1px;
+      //}
     }
     &.show-tick .dropdown-menu li {
       &.selected a span.check-mark {
