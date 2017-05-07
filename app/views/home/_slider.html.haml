@@ -1,4 +1,4 @@
-%section.home-slider
+%section.home-slider#home
   .slider
     %ul.slides
 
@@ -11,18 +11,20 @@
           %a.btn.btn-info{:href => "#contact"} Enquire Now
 
       %li
-        = image_tag "site/pb6.jpg"
+        = image_tag "site/main-2.jpg"
         .caption.center-align
           %h3.white-text.font-bold We are here for you
           %h5.light.white-text.text-lighten-3 ...providing warm, sincere and engaging service that ensures your guests have fun and feel valued
 
       %li
-        = image_tag "site/pb2.jpg"
+        = image_tag "site/main-7.jpg"
         .caption.center-align
           %h3.white-text.font-bold We are dedicated to our goal
           %h5.light.white-text.text-lighten-3 Adding fun and lasting memories to your event
 
 :javascript
   $(document).ready(function(){
-    $('.slider').slider();
+    $('.slider').slider({
+      height: "600"
+    });
   });

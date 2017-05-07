@@ -2,13 +2,13 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FAMA
+    %meta{:name => "description", :content => "FamaPhotobooths offers affordable photobooths that enhance any occasion by capturing valuable memories that you will smile about for years to come. Get in contact with us today" }
+    %title FamaPhotobooths
     = csrf_meta_tags
-    %link{:href => "assets/favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
-    %link{:href => "assets/favicon.ico", :rel => "icon", :type => "image/x-icon"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
+    %link(href="/favicon.ico" rel="shortcut icon")
   %body
   / LOADER
   -##loader
@@ -46,13 +46,13 @@
                     %i.fa.fa-twitter
                 %li
                   %a{:href => "#."}
-                    %i.fa.fa-google
-                %li
-                  %a{:href => "#."}
-                    %i.fa.fa-linkedin
-                %li
-                  %a{:href => "#."}
-                    %i.fa.fa-dribbble
+                    %i.fa.fa-instagram
+                -#%li
+                -#  %a{:href => "#."}
+                -#    %i.fa.fa-linkedin
+                -#%li
+                -#  %a{:href => "#."}
+                -#    %i.fa.fa-dribbble
         .container
           .col-md-3
             = image_tag "logo.png", class: 'logo'
@@ -61,7 +61,8 @@
             %nav
               %ul#ownmenu.ownmenu
                 %li
-                  = link_to "HOME", root_path
+                  %a{:href => "#home"} HOME
+                  -#= link_to "HOME", root_path
                 %li
                   %a{:href => "#about"} About
                 %li
@@ -98,13 +99,13 @@
               %i.fa.fa-twitter
           %li
             %a{:href => "#."}
-              %i.fa.fa-google
-          %li
-            %a{:href => "#."}
-              %i.fa.fa-linkedin
-          %li
-            %a{:href => "#."}
-              %i.fa.fa-dribbble
+              %i.fa.fa-instagram
+          -#%li
+          -#  %a{:href => "#."}
+          -#    %i.fa.fa-linkedin
+          -#%li
+          -#  %a{:href => "#."}
+          -#    %i.fa.fa-dribbble
       -#/ Our Services
       -#.col-md-4
       -#  %h5 Our Services
