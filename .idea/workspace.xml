@@ -26,16 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2821f0f3-7f97-4907-ac89-563c9962ebf1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/favicon.ico" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FAMA.iml" afterPath="$PROJECT_DIR$/.idea/FAMA.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_contact.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_contact.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_packages.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_packages.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_promo.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_promo.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_services.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_services.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_slider.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_slider.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -90,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_packages.html.haml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_packages.html.haml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/_packages.html.haml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
@@ -143,15 +134,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.haml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+            <state relative-caret-position="330">
+              <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
               <folding>
-                <marker date="1494121460000" expanded="true" signature="4289:4544" ph="{...}" />
-                <marker date="1494121460000" expanded="true" signature="4337:4538" ph="{...}" />
-                <marker date="1494121460000" expanded="true" signature="4465:4516" ph="{...}" />
+                <marker date="1494126582000" expanded="true" signature="4321:4576" ph="{...}" />
+                <marker date="1494126582000" expanded="true" signature="4369:4570" ph="{...}" />
+                <marker date="1494126582000" expanded="true" signature="4497:4548" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -237,12 +228,12 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/home.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/home/_slider.html.haml" />
         <option value="$PROJECT_DIR$/app/views/home/_promo.html.haml" />
         <option value="$PROJECT_DIR$/app/views/home/_contact.html.haml" />
         <option value="$PROJECT_DIR$/app/views/home/_services.html.haml" />
         <option value="$PROJECT_DIR$/app/views/home/_packages.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       </list>
     </option>
   </component>
@@ -813,12 +804,12 @@
       <workItem from="1492943105370" duration="7744000" />
       <workItem from="1493573298992" duration="672000" />
       <workItem from="1493713433436" duration="21000" />
-      <workItem from="1494018490093" duration="7631000" />
+      <workItem from="1494018490093" duration="8052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86639000" />
+    <option name="totallyTimeSpent" value="87060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1185,18 +1176,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="101" column="32" lean-forward="false" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
-          <folding>
-            <marker date="1494121460000" expanded="true" signature="4289:4544" ph="{...}" />
-            <marker date="1494121460000" expanded="true" signature="4337:4538" ph="{...}" />
-            <marker date="1494121460000" expanded="true" signature="4465:4516" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -1238,6 +1217,18 @@
         <state relative-caret-position="377">
           <caret line="245" column="9" lean-forward="true" selection-start-line="245" selection-start-column="9" selection-end-line="245" selection-end-column="9" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <marker date="1494126582000" expanded="true" signature="4321:4576" ph="{...}" />
+            <marker date="1494126582000" expanded="true" signature="4369:4570" ph="{...}" />
+            <marker date="1494126582000" expanded="true" signature="4497:4548" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
