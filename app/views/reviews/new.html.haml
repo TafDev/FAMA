@@ -1,0 +1,46 @@
+/ Reviews
+.contact#contact.style-3.padding-top-10.padding-bottom-80
+  .container
+    .heading-block.text-center.margin-bottom-80
+      %h3 How did we do?
+      %hr/
+      %span.margin-top-20
+        We take your opinions of our work very seriously and we continue to improve based on them. So how did we do? Did we meet your expectations?
+        Please leave your review below
+        %strong You can give us a call at +447500946019 if you were unpleased with our service
+    / Form
+    .contact-right.padding-top-30.padding-left-30
+      / Success Msg
+      #contact_message.success-msg
+        %i.fa.fa-paper-plane-o>
+        Thank You. Your Message has been Submitted
+      / FORM
+      #contact_form.contact-form
+        = form_for @review do |f|
+          = notice
+          = @review.errors.full_messages.join(', ')
+
+          .col-md-12
+            .col-md-6
+              %li
+                = f.text_field :name, placeholder: "Your Name", class: "form-control", required: true
+            .col-md-6
+              %li
+                = f.email_field :email, placeholder: "Your Email", class: "form-control", required: true
+            %li
+              = f.text_field :title, placeholder: "Review Heading", class: "form-control", required: true
+            %li
+              = f.text_area :body, placeholder: "Your Review", class: "form-control", required: true
+
+            %li.form-group
+              %p Your Rating:
+              #user_stars
+
+            = f.submit "Send", class: "btn"
+
+:javascript
+  $('#user_stars').raty({
+    path: '/assets',
+    scoreName: 'review[star]',
+    score: 1
+  });

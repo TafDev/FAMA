@@ -1,18 +1,21 @@
-%section.testimonial.style-2.light-gray-bg
+%section.testimonial.style-2.light-gray-bg.padding-top-50
   .container
     .row
-      .col-md-4
-        .pink-bg.padding-left-40.padding-right-40.padding-top-80.padding-bottom-80
-          %h6.text-uppercase.text-white.letter-space-2.margin-bottom-40.font-16px.font-normal We love our clients
-          %p.text-white.line-height-28 The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. Come and listen to a story about a man named Jed mountaineer barely kept his family fed. Just sit right back and you'll.
-          %a.waves-effect.waves-light.btn.btn-white.margin-right-20.margin-top-50{:href => "#."} get a quote
+      .heading-block.text-center
+        %h3 What our clients think
+        %hr/
+      -#.col-md-4
+      -#  .pink-bg.padding-left-40.padding-right-40.padding-top-80.padding-bottom-80
+      -#    %h6.text-uppercase.text-white.letter-space-2.margin-bottom-40.font-16px.font-normal We love our clients
+      -#    %p.text-white.line-height-28 The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. Come and listen to a story about a man named Jed mountaineer barely kept his family fed. Just sit right back and you'll.
+      -#    %a.waves-effect.waves-light.btn.btn-white.margin-right-20.margin-top-50{:href => "#."} get a quote
       / Slider
-      .col-md-8
+      .col-md-12
         .single-slides
           / Slider item
           .item
-            .avatar
-              = image_tag "avatar.jpg"
+            -#.avatar
+            -#  = image_tag "avatar.jpg"
             .stars
               %i.fa.fa-star
               %i.fa.fa-star

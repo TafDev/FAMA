@@ -1,0 +1,32 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:name => "description", :content => "FamaPhotobooths offers affordable photobooths that enhance any occasion by capturing valuable memories that you will smile about for years to come. Get in contact with us today" }
+    %title FamaPhotobooths - 404
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+
+    %body
+
+      #wrap
+        / Header
+        %header.header.coporate-header
+          .sticky
+            .top-bar
+              .container
+                .col-md-6
+                  %ul.row
+                    %li.margin-right-20
+                      %p
+                        %i.fa.fa-envelope-o.margin-right-10>
+                        enquiries@famaphotobooths.com
+                    %li.margin-right-20
+                      %p
+                        %i.fa.fa-phone.margin-right-10
+                          +447500946019
+
+        #content
+          %section.padding-top-100.padding-bottom-100
+            .container
+              %h1.text-uppercase.letter-space-4.color-primary-pink.margin-bottom-50 Sorry page not found
+              %h2.letter-space-4.color-primary-pink.margin-bottom-50 Either the page has moved or you mistyped. Please check your url
+              %h3= link_to "Take me back", root_path

@@ -78,8 +78,15 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+#production:
+#  <<: *default
+#  database: FAMA_production
+#  username: FAMA
+#  password: <%= ENV['FAMA_DATABASE_PASSWORD'] %>
+
 production:
-  <<: *default
-  database: FAMA_production
-  username: FAMA
-  password: <%= ENV['FAMA_DATABASE_PASSWORD'] %>
+   adapter: jdbc
+   driver: com.mysql.jdbc.Driver
+   url: jdbc:mysql://localhost:3306/Fama_production
+   username: Fama
+   password: <%= ENV['GD_PASSWORD'] %>
