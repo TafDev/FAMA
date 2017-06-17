@@ -27,6 +27,9 @@ gem 'simple-line-icons-rails'
 gem 'mail_form'
 gem 'figaro'
 gem 'pandoc-ruby'
+gem 'capistrano-passenger'
+gem 'capistrano-rbenv', '~> 2.1'
+
 
 
 group :development, :test do
