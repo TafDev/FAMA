@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "home#index"
-  resources :contacts,  only: [:new, :create]
-  resources :reviews, only: [:new, :create]
-  match '*a', :to => 'errors#routing', via: :get
+  resources :contacts,  only: [:create]
+  resources :reviews, only: [:create]
+  # match '*a', :to => 'errors#routing', via: :get
+
+  get '/about' => 'home#about'
+  get '/services' => 'home#services'
+  get '/faq' => 'home#faq'
+  get '/review' => 'reviews#new'
+  get '/contact' => 'contacts#new'
+
 end

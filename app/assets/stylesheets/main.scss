@@ -5,6 +5,9 @@
   background-color: #794EFD;
 }
 
+span.codedirection { unicode-bidi:bidi-override; direction: rtl; }
+
+
 .slider .slides li img {
   background-position: 0 0;
 }

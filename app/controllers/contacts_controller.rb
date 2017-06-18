@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(params[:contacts])
     @contact.request = request
     if @contact.deliver
       flash[:pink] = "We have received your enquiry, we will be in touch shortly"
