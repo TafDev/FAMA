@@ -1,56 +1,31 @@
-%section.testimonial.style-2.light-gray-bg.padding-top-50
+%section.testimonial.style-2.padding-top-50
   .container
-    .row
-      .heading-block.text-center
-        %h3 What our clients think
-        %hr/
-      -#.col-md-4
-      -#  .pink-bg.padding-left-40.padding-right-40.padding-top-80.padding-bottom-80
-      -#    %h6.text-uppercase.text-white.letter-space-2.margin-bottom-40.font-16px.font-normal We love our clients
-      -#    %p.text-white.line-height-28 The Brady Bunch the Brady Bunch that's the way we all became the Brady Bunch. Come and listen to a story about a man named Jed mountaineer barely kept his family fed. Just sit right back and you'll.
-      -#    %a.waves-effect.waves-light.btn.btn-white.margin-right-20.margin-top-50{:href => "#."} get a quote
-      / Slider
-      .col-md-12
-        .single-slides
-          / Slider item
+    -#.row
+    -#  .heading-block.text-center
+    -#    %h3 What our clients think
+    -#    %hr/
+
+  / Slider
+  .col-md-12.purple-bg
+    .col-md-4
+      .pink-bg.padding-left-40.padding-right-40.padding-top-80.padding-bottom-80
+        %h6.text-uppercase.text-white.letter-space-2.margin-bottom-40.font-16px.font-normal What our clients think
+        %p.text-white.line-height-28 We are not just here for the business, we are here to make your event a success and our clients agree that we do only our absolute best
+        = link_to "View Packages", services_path, class: "waves-effect waves-light btn btn-white margin-right-20 margin-top-50"
+
+    .col-md-8
+      .single-slides
+        / Slider item
+        - @reviews.each do |review|
           .item
-            -#.avatar
-            -#  = image_tag "avatar.jpg"
             .stars
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
+              - review.star.times do
+                %i.fa.fa-star
+
+            %h6.u-h3
+              = review.title
             %p
-              Friendly neighbors there that's where we meet. Can you tell me how to get how to get to Sesame Street! Here's the story of a lovely lady who was bringing up three very lovely girls. Said Californ'y is the place you ought to be
-              So they loaded up the truck and moved to Beverly. Hills that is stars.
-            %h6 Micheal Anderson
-          / Slider item
-          .item
-            .avatar
-              = image_tag "avatar.jpg"
-            .stars
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-            %p
-              Friendly neighbors there that's where we meet. Can you tell me how to get how to get to Sesame Street! Here's the story of a lovely lady who was bringing up three very lovely girls. Said Californ'y is the place you ought to be
-              So they loaded up the truck and moved to Beverly. Hills that is stars.
-            %h6 Micheal Anderson
-          / Slider item
-          .item
-            .avatar
-              = image_tag "avatar.jpg"
-            .stars
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-            %p
-              Friendly neighbors there that's where we meet. Can you tell me how to get how to get to Sesame Street! Here's the story of a lovely lady who was bringing up three very lovely girls. Said Californ'y is the place you ought to be
-              So they loaded up the truck and moved to Beverly. Hills that is stars.
-            %h6 Micheal Anderson
+              = review.body
+            %h6
+              = review.name
+

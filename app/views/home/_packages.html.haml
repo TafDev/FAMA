@@ -1,11 +1,11 @@
 = provide(:description, 'FamaPhotobooths offers affordable photobooths with a variety of packages to choose from.')
 = provide(:keywords, 'Packages, photobooths, events, photobooth, affordable, occasion')
 
-%section#services.padding-top-100.padding-bottom-30.light-gray-bg
+%section#services.padding-top-50.padding-bottom-30.light-gray-bg
   .container
     / HEADING BLOCK
     .heading-block.text-center
-      %h1 Our Products
+      %h1 Our Packages
       %hr/
       %span.margin-top-20 We offer clients packages customized to their needs or you can choose from one of our 3 set packages with the following services
 
@@ -22,7 +22,7 @@
                 %span.pricely-currency £
                 %span.pricely-amount  261
               %span.pricely-button
-                %a.btn.btn-info{:href => "#contact"} Enquire
+                = link_to "Enquire", contact_path, class: "btn btn-info"
 
             %ul.list-group
               %li.list-group-item
@@ -98,7 +98,7 @@
                   %span.pricely-currency £
                   %span.pricely-amount 299
                 %span.pricely-button
-                  %a.btn.btn-info{:href => "#contact"} Enquire
+                  = link_to "Enquire", contact_path, class: "btn btn-info"
 
               %ul.list-group
                 %li.list-group-item
@@ -174,7 +174,7 @@
                   %span.pricely-currency £
                   %span.pricely-amount 374
                 %span.pricely-button
-                  %a.btn.btn-info{:href => "#contact"} Enquire
+                  = link_to "Enquire", contact_path, class: "btn btn-info"
 
               %ul.list-group
                 %li.list-group-item
@@ -253,3 +253,5 @@
         %li Large portraits for guest to leave a message and sign
         %li Guest survey with choice of questions
         %li Design of artwork/ theme
+
+= render 'promo'

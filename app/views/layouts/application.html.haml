@@ -49,14 +49,13 @@
               %ul#ownmenu.ownmenu
                 %li
                   = link_to "Home", root_path
-                -#%li
-                -#  = link_to "About", about_path
                 %li
-                  = link_to "Our Products", services_path
+                  = link_to "Our Packages", services_path
                 %li
                   = link_to "Contact Us", contact_path
-          .col-md-2
-            %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
+          -#.col-md-2
+          -#  = link_
+          -#  %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
     / End Header
 
     - flash.each do |key, value|

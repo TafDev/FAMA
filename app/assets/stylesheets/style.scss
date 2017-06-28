@@ -1322,7 +1322,8 @@ header .is-sticky .sticky nav li a {
     width: 70%;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 50px;
+    //padding-bottom: 50px;
+    padding: 6em;
   }
   .avatar {
     width: 130px;
@@ -1345,7 +1346,7 @@ header .is-sticky .sticky nav li a {
   }
   .single-slides {
     .stars {
-      color: #f34580;
+      color: #ffffff;
       margin-bottom: 20px;
       i {
         margin: 0 2px;
@@ -1358,7 +1359,7 @@ header .is-sticky .sticky nav li a {
       line-height: 30px;
     }
     h6 {
-      color: #f34580;
+      color: #ffffff;
       letter-spacing: 2px;
       font-size: 16px;
       font-weight: normal;
@@ -3209,4 +3210,17 @@ footer {
     margin-top: 30px;
     display: inline-block;
   }
+}
+
+.item {
+  p {
+    color: white;
+  }
+}
+
+.u-h3 {
+  color: #ffffff;
+  font-size: 2.5em;
+  font-weight: bolder;
+  padding-bottom: 1em;
 }

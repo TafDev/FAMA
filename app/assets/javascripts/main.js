@@ -13,7 +13,7 @@ $(".sticky").sticky({topSpacing:0});
 /*-----------------------------------------------------------------------------------*/
 $('.single-slides').owlCarousel({
 	items : 1,
-	autoplay:false,
+	autoplay:true,
 	singleItem	: true,
 	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 	lazyLoad:true,
