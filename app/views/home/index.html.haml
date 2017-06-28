@@ -6,5 +6,6 @@
 #content
   = render 'services'
   -#= render 'work_process'
-  = render 'testimonials'
+  - if @reviews.any?
+    = render 'testimonials'
 
