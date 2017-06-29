@@ -13,233 +13,90 @@
     .pricely-chart.pricely-professional
       %section.pricely-chart-three.col-xs-12
         %ul.pricely-pro
-          %li.pricely-inner.panel-info.col-xs-12.col-md-4
-            %h3.panel-heading
-              %span.pricely-label Silver
-              %span.pricely-foreword Up to 3 Hours
-              %span.reduced-price £349
-              .pricely-figure
-                %span.pricely-currency £
-                %span.pricely-amount  299
-              %span.pricely-button
-                = link_to "Enquire", contact_path, class: "btn btn-info"
-
-            %ul.list-group
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Photobooth
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Photobooth attendant
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Vibrant and fun propbox
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Free guestbook
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Option for guests to buy a key ring
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span USB with event pictures
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Public Liability Insurance
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span GIFs
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Interactive Touchscreen
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Red Curtain Background
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Unlimited visits to the booth
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Social Media Uploads
-              %li.list-group-item
-                %span.glyphicon.glyphicon-ok.right
-                %span Personalised messages
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Green Screen Choice with choice of a variety of backgrounds.
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Facial Recognition filters (snapchat style)
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Red carpet and luxury rope
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span 5 free key rings and 2 4x6in picture frames.
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Karaoke
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Merryoke
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Video messages
-              %li.list-group-item
-                %span.glyphicon.glyphicon-remove.x.right
-                %span Theme/ logo on prints (artwork provided by customer)
-
+          - Product.all.each do |p|
             %li.pricely-inner.panel-info.col-xs-12.col-md-4
               %h3.panel-heading
-                %span.pricely-label Gold
-                %span.pricely-foreword Up to 4 Hours
-                %span.reduced-price £399
+                %span.pricely-label
+                  = p.name
+                %span.pricely-foreword
+                  = p.period
+                %span.reduced-price
+                  = p.price.to_s.gsub(/(\.)0+$/, '')
                 .pricely-figure
                   %span.pricely-currency £
-                  %span.pricely-amount 349
+                  %span.pricely-amount
+                    - if p.percent_discount
+                      = p.price_by_percent_discount.to_s.gsub(/(\.)0+$/, '')
+                    - else
+                      = p.price_by_amount_discount.to_s.gsub(/(\.)0+$/, '')
                 %span.pricely-button
                   = link_to "Enquire", contact_path, class: "btn btn-info"
 
               %ul.list-group
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.photobooth? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Photobooth
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.photobooth_attendant? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Photobooth attendant
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.propbox? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Vibrant and fun propbox
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.guestbook? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Free guestbook
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.key_ring? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Option for guests to buy a key ring
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.usb? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span USB with event pictures
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.public_liability_insurance? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Public Liability Insurance
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.gif? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span GIFs
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.interactive_touchscreen? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Interactive Touchscreen
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.red_curtain_background? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Red Curtain Background
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.unlimited_visits? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Unlimited visits to the booth
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.social_media_uploads? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Social Media Uploads
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.personalised_messages? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Personalised messages
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.green_screen? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Green Screen Choice with choice of a variety of backgrounds.
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
+                  %span.glyphicon.right{class: (p.facial_recognition? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Facial Recognition filters (snapchat style)
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-remove.x.right
+                  %span.glyphicon.right{class: (p.red_carpet? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Red carpet and luxury rope
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-remove.x.right
+                  %span.glyphicon.right{class: (p.free_keyrings? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span 5 free key rings and 2 4x6in picture frames.
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-remove.x.right
+                  %span.glyphicon.right{class: (p.karaoke? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Karaoke
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-remove.x.right
+                  %span.glyphicon.right{class: (p.merryoke? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Merryoke
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-remove.x.right
+                  %span.glyphicon.right{class: (p.video_messages? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Video messages
                 %li.list-group-item
-                  %span.glyphicon.glyphicon-remove.x.right
+                  %span.glyphicon.right{class: (p.personalised_theme? ? "glyphicon-ok" : "glyphicon-remove x")}
                   %span Theme/ logo on prints (artwork provided by customer)
 
-            %li.pricely-inner.panel-info.col-xs-12.col-md-4
-              %h3.panel-heading
-                %span.pricely-label Platinum
-                %span.pricely-foreword Up to 5 Hours
-                %span.reduced-price £499
-                .pricely-figure
-                  %span.pricely-currency £
-                  %span.pricely-amount 449
-                %span.pricely-button
-                  = link_to "Enquire", contact_path, class: "btn btn-info"
-
-              %ul.list-group
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Photobooth
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Photobooth attendant
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Vibrant and fun propbox
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Free guestbook
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Option for guests to buy a key ring
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span USB with event pictures
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Public Liability Insurance
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span GIFs
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Interactive Touchscreen
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Red Curtain Background
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Unlimited visits to the booth
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Social Media Uploads
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Personalised messages
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Green Screen Choice with choice of a variety of backgrounds.
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Facial Recognition filters (snapchat style)
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Red carpet and luxury rope
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span 5 free key rings and 2 4x6in picture frames.
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Karaoke
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Merryoke
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Video messages
-                %li.list-group-item
-                  %span.glyphicon.glyphicon-ok.right
-                  %span Theme/ logo on prints (artwork provided by customer)
 
     .heading-block.text-center.padding-top-50
       %h2 Need a little more?
