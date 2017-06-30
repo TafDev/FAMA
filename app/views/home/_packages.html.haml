@@ -30,7 +30,7 @@
                     - else
                       = p.price_by_amount_discount.to_s.gsub(/(\.)0+$/, '')
                 %span.pricely-button
-                  = link_to "Enquire", contact_path, class: "btn btn-info"
+                  = link_to "Purchase", new_product_transaction_path(p), class: "btn btn-info"
 
               %ul.list-group
                 %li.list-group-item

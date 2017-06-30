@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629015733) do
+ActiveRecord::Schema.define(version: 20170629200736) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,4 +89,24 @@ ActiveRecord::Schema.define(version: 20170629015733) do
     t.boolean  "approved",   default: false
   end
 
+  create_table "transactions", force: :cascade do |t|
+    t.integer  "product_id"
+    t.float    "amount"
+    t.string   "first_name"
+    t.string   "middle_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.datetime "date"
+    t.datetime "time"
+    t.string   "postcode"
+    t.text     "address"
+    t.text     "notes"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.index ["product_id"], name: "index_transactions_on_product_id", using: :btree
+  end
+
+  add_foreign_key "transactions", "products"
 end

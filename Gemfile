@@ -30,6 +30,7 @@ gem 'pandoc-ruby'
 gem 'capistrano-passenger'
 gem 'sitemap_generator'
 gem 'capistrano-rbenv', '~> 2.1'
+gem 'geocoder'
 gem 'devise'
 gem 'activeadmin'
 

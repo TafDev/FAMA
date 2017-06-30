@@ -3039,9 +3039,9 @@ footer {
   }
 }
 
-#contact_form li .form-control:focus {
-  border-bottom: 1px solid #f6b138;
-}
+//#contact_form li .form-control:focus {
+//  border-bottom: 1px solid #f6b138;
+//}
 
 .contact.style-2 {
   .contact-img {
@@ -3062,7 +3062,7 @@ footer {
   }
   #contact_form li .form-control {
     background: #fff;
-    border: none;
+    //border: none;
     font-size: 14px;
     color: #000;
   }
@@ -3136,8 +3136,8 @@ footer {
 
 .contact {
   &.style-3 #contact_form li .form-control {
-    border: none !important;
-    border-bottom: 1px solid black !important;
+    //border: none !important;
+    //border-bottom: 1px solid black !important;
     color: #141414;
     margin-bottom: 20px;
     height: 50px;
@@ -3148,13 +3148,13 @@ footer {
     //text-transform: uppercase;
     line-height: 50px;
   }
-  #contact_form li .form-control {
-    border: none !important;
-    border-bottom: 1px solid $main-color !important;
-    &:focus {
-      border-bottom: 1px solid $main-color !important;
-    }
-  }
+  //#contact_form li .form-control {
+  //  border: none !important;
+  //  border-bottom: 1px solid $main-color !important;
+  //  &:focus {
+  //    border-bottom: 1px solid $main-color !important;
+  //  }
+  //}
   &.style-3 #contact_form li textarea {
     padding: 0px;
     padding-left: 10px;
@@ -3223,4 +3223,46 @@ footer {
   font-size: 2.5em;
   font-weight: bolder;
   padding-bottom: 1em;
+}
+
+/* Text inputs */
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea.materialize-textarea {
+
+  // General Styles
+  background-color: transparent;
+  border: 1px solid #aaaaaa;
+  //border-bottom: #aaaaaa;
+  border-radius: 0;
+  outline: none;
+  height: $input-height;
+  width: 100%;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+  //box-shadow: none;
+  box-sizing: content-box;
+  transition: $input-transition;
+}
+
+.select-wrapper input.select-dropdown {
+  border: 1px solid #aaaaaa;
+
+
+}
+
+#contact_form li input {
+  color: #aaa;
 }

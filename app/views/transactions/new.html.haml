@@ -1,0 +1,46 @@
+.contact#contact.style-3.padding-top-10.padding-bottom-80
+  .container
+    .heading-block.text-center.margin-bottom-80
+      %h3 Book your #{@product.name.downcase.capitalize} Package
+      %hr/
+      %span.margin-top-20
+        If you have any questions regarding any of our packages or want to make an enquiry please fill out the form and we will get back to you as fast as we can
+        %strong or you can give us a call at +447500946019
+    / Form
+    .contact-right.padding-top-30.padding-left-30
+      / Success Msg
+      #contact_message.success-msg
+        %i.fa.fa-paper-plane-o>
+        Thank You. Your Message has been Submitted
+      / FORM
+      #contact_form.contact-form
+        = form_for [@product, @transaction] do |f|
+          .col-md-12
+            .row
+              .col-md-6
+                %li
+                  = f.text_field :date, class: "datepicker ", placeholder: "Pick a date"
+              .col-md-6
+                %li
+                  = f.text_field :time, class: "timepicker ", placeholder: "Pick a time"
+            .row
+              .col-md-12
+                %li
+                  = f.text_field :first_name, class: "", placeholder: "First Name"
+                %li
+                  = f.text_field :middle_name, class: "", placeholder: "Middle Name"
+                %li
+                  = f.text_field :last_name, class: "", placeholder: "Last Name"
+                %li
+                  = f.text_area :notes, class: "", placeholder: "Notes"
+                %li
+                  = f.text_field :postcode, class: "", placeholder: "Postcode"
+                %li
+                  = f.text_field :address, class: "", placeholder: "Address (optional)"
+
+            .row
+              .col-md-6
+                = link_to "Pay by card", services_path,class: "btn btn-info right"
+              .col-md-6
+                %img{:alt => "PayPal Checkout", class: "left", :src => "https://www.paypalobjects.com/webstatic/en_US/i/btn/png/silver-rect-paypalcheckout-44px.png"}/
+

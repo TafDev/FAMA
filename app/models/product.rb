@@ -1,4 +1,6 @@
 class Product < ApplicationRecord
+
+  has_many :transactions
   validates_presence_of :name, :price, :period
 
   def price_by_amount_discount
