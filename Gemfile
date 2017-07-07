@@ -27,17 +27,17 @@ gem 'simple-line-icons-rails'
 gem 'mail_form'
 gem 'figaro'
 gem 'pandoc-ruby'
+gem 'capistrano3-delayed-job', '~> 1.0'
 gem 'capistrano-passenger'
 gem 'sitemap_generator'
 gem 'capistrano-rbenv', '~> 2.1'
 gem 'geocoder'
 gem 'devise'
 gem 'activeadmin'
-
-
-
+gem 'delayed_job_active_record'
 
 group :development, :test do
+  gem "letter_opener"
   gem 'pry-byebug'
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
@@ -53,7 +53,6 @@ end
 group :development do
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.2'
-  gem "letter_opener"
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

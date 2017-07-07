@@ -34,6 +34,7 @@ require "capistrano/bundler"
 require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 require "capistrano/passenger"
+require 'capistrano/delayed_job'
 
 # If you are using rbenv add these lines:
 # require 'capistrano/rbenv'

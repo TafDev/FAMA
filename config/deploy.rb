@@ -15,6 +15,11 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 
 set :migration_role, :app
 
+set :delayed_job_command, "bin/delayed_job"
+after 'deploy:published', 'restart' do
+  invoke 'delayed_job:restart'
+end
+
 # set :rails_env, 'production'
 
 # Default branch is :master

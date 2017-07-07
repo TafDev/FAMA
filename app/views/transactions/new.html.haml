@@ -19,28 +19,59 @@
             .row
               .col-md-6
                 %li
-                  = f.text_field :date, class: "datepicker ", placeholder: "Pick a date"
+                  = f.text_field :date, class: "datepicker", placeholder: "Select Date", readonly: "true"
               .col-md-6
                 %li
-                  = f.text_field :time, class: "timepicker ", placeholder: "Pick a time"
+                  = f.text_field :time, :ignore_date => true, placeholder: "Start Time"
             .row
               .col-md-12
                 %li
                   = f.text_field :first_name, class: "", placeholder: "First Name"
                 %li
-                  = f.text_field :middle_name, class: "", placeholder: "Middle Name"
+                  = f.text_field :middle_name, class: "", placeholder: "Middle Name (Optional)"
                 %li
                   = f.text_field :last_name, class: "", placeholder: "Last Name"
                 %li
-                  = f.text_area :notes, class: "", placeholder: "Notes"
+                  = f.email_field :email, class: "", placeholder: "Email"
+                %li
+                  = f.number_field :phone_number, class: "", placeholder: "Phone Number"
+                %li
+                  = f.text_area :notes, class: "", placeholder: "Notes (Optional)"
                 %li
                   = f.text_field :postcode, class: "", placeholder: "Postcode"
                 %li
                   = f.text_field :address, class: "", placeholder: "Address (optional)"
 
-            .row
-              .col-md-6
-                = link_to "Pay by card", services_path,class: "btn btn-info right"
-              .col-md-6
-                %img{:alt => "PayPal Checkout", class: "left", :src => "https://www.paypalobjects.com/webstatic/en_US/i/btn/png/silver-rect-paypalcheckout-44px.png"}/
+            = f.hidden_field :payment_type, value: "PayPal"
+            = f.hidden_field :product_id, value: @product.id
 
+            = f.submit "Secure Checkout with PayPal", class: "btn"
+
+
+
+:javascript
+
+  function unavailable(date) {
+    dmy = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+    return [$.inArray(dmy, unavaibleDates) == -1];
+  }
+
+  unavaibleDates = [];
+
+  $.ajax({
+    url: '/preload',
+    data: {product_id: #{@product.id}},
+    dataType: "json",
+    success: function(data) {
+      $.each(data, function(arrID, arrValue) {
+        unavaibleDates.push($.datepicker.formatDate('d-m-yy', new Date(arrValue)));
+      });
+
+      $(".datepicker").datepicker({
+        dateFormat: 'yy-mm-dd',
+        minDate: 0,
+        maxDate: '3m',
+        beforeShowDay: unavailable
+      });
+    }
+  });

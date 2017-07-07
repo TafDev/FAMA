@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   get '/faq' => 'home#faq'
   get '/review' => 'reviews#new'
   get '/contact' => 'contacts#new'
+  post '/notify' => 'transactions#notify'
+  get 'thank_you' => 'transactions#thank_you'
+  get '/preload' => 'transactions#preload'
 
 end
