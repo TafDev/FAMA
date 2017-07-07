@@ -19,6 +19,7 @@ set :delayed_job_command, "bin/delayed_job"
 after 'deploy:published', 'restart' do
   invoke 'delayed_job:restart'
 end
+set :bundle_binstubs, nil
 
 # set :rails_env, 'production'
 
