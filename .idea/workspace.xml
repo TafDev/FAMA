@@ -26,23 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2821f0f3-7f97-4907-ac89-563c9962ebf1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ef879921-b5d9-4af9-936b-608e7ee411d4/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/ef879921-b5d9-4af9-936b-608e7ee411d4/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ef879921-b5d9-4af9-936b-608e7ee411d4/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/ef879921-b5d9-4af9-936b-608e7ee411d4/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/FAMA.iml" afterPath="$PROJECT_DIR$/.idea/FAMA.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ef879921-b5d9-4af9-936b-608e7ee411d4.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ef879921-b5d9-4af9-936b-608e7ee411d4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/active_admin.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_slider.html.haml" afterPath="$PROJECT_DIR$/app/views/home/_slider.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/active_admin.rb" afterPath="$PROJECT_DIR$/config/initializers/active_admin.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -233,21 +217,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_uploader.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="image_uploader.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="deploy.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/deploy.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -333,7 +317,6 @@
         <option value="$PROJECT_DIR$/app/mailers/recipient_email_mailer.rb" />
         <option value="$PROJECT_DIR$/app/controllers/transactions_controller.rb" />
         <option value="$PROJECT_DIR$/Capfile" />
-        <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/models/image.rb" />
         <option value="$PROJECT_DIR$/app/admin/home.rb" />
@@ -353,6 +336,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/upload-image.js" />
         <option value="$PROJECT_DIR$/app/views/home/_slider.html.haml" />
         <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
+        <option value="$PROJECT_DIR$/config/deploy.rb" />
       </list>
     </option>
   </component>
@@ -445,7 +429,7 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="SearchEverywhereHistoryKey" value="Gem&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;databas&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/database.yml&#10;Ge&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;deploy&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;Capf&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Capfile&#10;G&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;application&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/application.rb&#10;delayed&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/bin/delayed_job&#10;developm&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/environments/development.rb&#10;gem&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;404&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/public/404.html&#10;route&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/routes.rb&#10;g&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;rou&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/routes.rb&#10;routes&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/routes.rb&#10;robo&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/public/robots.txt&#10;sitema&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/sitemap.rb&#10;depl&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;deplo&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;Cap&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Capfile&#10;dep&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;application.rb&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/application.rb" />
+    <property name="SearchEverywhereHistoryKey" value="depl&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;Gem&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;databas&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/database.yml&#10;Ge&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;deploy&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;Capf&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Capfile&#10;G&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;application&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/application.rb&#10;delayed&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/bin/delayed_job&#10;developm&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/environments/development.rb&#10;gem&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;404&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/public/404.html&#10;route&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/routes.rb&#10;g&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Gemfile&#10;rou&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/routes.rb&#10;routes&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/routes.rb&#10;robo&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/public/robots.txt&#10;sitema&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/sitemap.rb&#10;deplo&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;Cap&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/Capfile&#10;dep&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/deploy.rb&#10;application.rb&#9;FILE&#9;file:///Users/beast/Desktop/Desktop Files/PersonalProjects/FAMA/config/application.rb" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.haml" />
     <property name="FullScreen" value="true" />
@@ -755,15 +739,16 @@
       <workItem from="1499330144941" duration="2545000" />
       <workItem from="1499421183255" duration="12750000" />
       <workItem from="1499785029408" duration="13170000" />
-      <workItem from="1500155331414" duration="438000" />
+      <workItem from="1500155331414" duration="1815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184425000" />
+    <option name="totallyTimeSpent" value="185802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
@@ -771,7 +756,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Floobits" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36900958" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36900958" sideWeight="0.49427754" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15601704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -937,13 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="84" lean-forward="false" selection-start-line="8" selection-start-column="84" selection-end-line="8" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -1178,8 +1156,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/deploy.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding />
         </state>
       </provider>
