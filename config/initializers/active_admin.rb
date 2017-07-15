@@ -1,4 +1,6 @@
 ActiveAdmin.setup do |config|
+  config.register_javascript 'upload-image.js'
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -195,12 +197,13 @@ ActiveAdmin.setup do |config|
   # To load a stylesheet:
   #   config.register_stylesheet 'my_stylesheet.css'
   #
+  config.register_stylesheet 'active.css'
   # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
   #   config.register_stylesheet 'my_print_stylesheet.css', media: :print
   #
   # To load a javascript file:
   #   config.register_javascript 'my_javascript.js'
-
+  config.register_javascript '//widget.cloudinary.com/global/all.js'
   # == CSV options
   #
   # Set the CSV builder separator

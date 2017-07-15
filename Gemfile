@@ -35,6 +35,8 @@ gem 'geocoder'
 gem 'devise'
 gem 'activeadmin'
 gem 'delayed_job_active_record'
+gem 'carrierwave'
+gem 'cloudinary'
 
 group :development, :test do
   gem "letter_opener"

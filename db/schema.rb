@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170707125356) do
+ActiveRecord::Schema.define(version: 20170711152350) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(version: 20170707125356) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "image"
+    t.string   "title"
+    t.text     "description"
+    t.text     "small_print"
+    t.string   "attachable_type"
+    t.integer  "attachable_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["attachable_type", "attachable_id"], name: "index_images_on_attachable_type_and_attachable_id", using: :btree
   end
 
   create_table "products", force: :cascade do |t|

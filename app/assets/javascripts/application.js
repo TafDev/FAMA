@@ -14,5 +14,6 @@
 //= require bootstrap-sprockets
 //= require materialize-sprockets
 //= require jquery_ujs
+//= stub upload-image
 //= require turbolinks
 //= require_tree .
