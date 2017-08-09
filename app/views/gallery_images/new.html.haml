@@ -1,0 +1,32 @@
+-#= provide(:description, 'Contact Famaphotobooths for any enquiries')
+-#= provide(:keywords, 'Contact us, photobooths, events, photobooth, affordable, occasion')
+/ Contact
+.contact#contact.style-3.padding-top-10.padding-bottom-80
+  .container
+    .heading-block.text-center.margin-bottom-80
+      %h3 Add images to #{@gallery.title}
+      %hr/
+      -#%span.margin-top-20
+      -#  If you have any questions regarding any of our packages or want to make an enquiry please fill out the form and we will get back to you as fast as we can
+      -#  %strong or you can give us a call at +447500946019
+    / Form
+    .contact-right.padding-top-30.padding-left-30
+      #contact_form.contact-form
+        = form_for [@gallery, @gallery_image] do |f|
+          .col-md-12
+            %li
+              = f.file_field :image, id: "upload_widget_opener",  multiple: true
+
+              = f.submit "Add Images to Gallery", class: "btn"
+
+
+-#:javascript
+-#  document.getElementById("upload_widget_opener").addEventListener("click", function() {
+-#    cloudinary.openUploadWidget({
+-#      cloud_name: 'dotgbvb4d',
+-#      upload_preset: 'znbq25is',
+-#      sources: ['local', 'url', 'camera', 'facebook', 'dropbox']
+-#
+-#    },
+-#      function(error, result) { console.log(error, result) });
+-#  }, false);

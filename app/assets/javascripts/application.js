@@ -16,4 +16,5 @@
 //= require jquery_ujs
 //= stub upload-image
 //= require turbolinks
+//= require lightbox
 //= require_tree .

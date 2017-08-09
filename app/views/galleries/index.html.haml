@@ -1,0 +1,19 @@
+.contact#contact.style-3.padding-top-10.padding-bottom-80
+  .container
+    .heading-block.text-center.margin-bottom-20
+      %h3
+        All Galleries
+      %hr/
+
+    .col-md-12.center-align.padding-bottom-50
+      - if admin_user_signed_in?
+        .btn.btn-pink.center
+          = link_to "Create a new Gallery", new_gallery_path
+
+    .col-md-12.padding-top-20.padding-bottom-80
+      .row
+        - @galleries.each do |gallery|
+          .col-md-3.col-sm-4.col-xs-12
+            %img.img-responsive
+              = link_to gallery_path(gallery) do
+                = image_tag gallery.cover_photo, class: "thumbnail"

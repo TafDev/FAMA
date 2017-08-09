@@ -10,5 +10,6 @@ $(document).ready(function () {
       cropping_show_dimensions: true,
       sources: ['local', 'url', 'camera', 'facebook', 'dropbox']
     },
-    function(error, result) { console.log(error, result) });
+  function(error, result) { console.log(error, result) });
+
 });

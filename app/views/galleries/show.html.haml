@@ -1,0 +1,19 @@
+.contact#contact.style-3.padding-top-10.padding-bottom-80
+  .container
+    .heading-block.text-center.margin-bottom-20
+      %h3
+        = @gallery.title
+      %hr/
+
+    .col-md-12.center-align.padding-bottom-50
+      - if admin_user_signed_in?
+        .btn.btn-pink.center
+          = link_to "Add images to this gallery", new_gallery_gallery_image_path(@gallery)
+
+  .col-md-12.padding-top-20.padding-bottom-80{style: "background-color: #383838;"}
+    .container
+      .row
+        - @gallery.gallery_images.each do |img|
+          .col-md-3.col-sm-4.col-xs-12
+            = link_to(image_tag(img.image.url(:thumb), class: "img-responsive thumbnail"), image_path(img.image.url(:original)), data: { lightbox: "example-set"})
+
