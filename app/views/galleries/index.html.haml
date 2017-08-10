@@ -5,28 +5,23 @@
         All Galleries
       %hr/
 
-    .col-md-12.center-align.padding-bottom-50
-      - if admin_user_signed_in?
+    - if admin_user_signed_in?
+      .col-md-12.center-align.padding-bottom-50
         .btn.btn-pink.center
           = link_to "Create a new Gallery", new_gallery_path
 
-    .col-md-12.padding-top-20.padding-bottom-80
-      .row
-        -#- @galleries.each do |gallery|
-        -#  .col-md-3.col-sm-4.col-xs-12
-        -#    %img.img-responsive
-        -#      = link_to gallery_path(gallery) do
-        -#        = image_tag gallery.cover_photo, class: "thumbnail"
-
-        - @galleries.each do |gallery|
-          .col-sm-4.col-xs-12
-            .col.s12
-              .card
-                .card-image
-                  = link_to gallery_path(gallery) do
-                    = image_tag gallery.cover_photo, class: "thumbnail"
-                .card-content
-                  %p
-                    = gallery.title
-                .card-action
-                  = link_to "View Gallery", gallery_path(gallery)
+.col-md-12.padding-top-20.padding-bottom-80{style: "background-color: #383838;"}
+  .container
+    .row
+      - @galleries.each do |gallery|
+        .col-sm-4.col-xs-12
+          .col.s12
+            .card
+              .card-image
+                = link_to gallery_path(gallery) do
+                  = image_tag gallery.cover_photo, class: "thumbnail"
+              .card-content
+                %p
+                  = gallery.title
+              .card-action
+                = link_to "View Gallery", gallery_path(gallery)
