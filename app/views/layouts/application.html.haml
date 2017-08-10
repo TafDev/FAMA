@@ -22,53 +22,52 @@
   -#      .progress
   -#        .indeterminate
   / Page Wrapper
-  #wrap
-    / Header
-    %header.header.coporate-header
-      .sticky
-        .top-bar
-          .container.center-align
-            %ul.row{style: "display: inline-block"}
-              %li.margin-right-20
-                %p
-                  %i.fa.fa-envelope-o.margin-right-10>
-                    enquiries@famaphotobooths.com
-              %li.margin-right-20
-                %p
-                  %i.fa.fa-phone.margin-right-10
-                    +447500946019
+#wrap
+  / Header
+  %header.header.coporate-header
+    .sticky
+      .top-bar
+        .container.center-align
+          %ul.row{style: "display: inline-block"}
+            %li.margin-right-20
+              %p
+                %i.fa.fa-envelope-o.margin-right-10>
+                  enquiries@famaphotobooths.com
+            %li.margin-right-20
+              %p
+                %i.fa.fa-phone.margin-right-10
+                  +447500946019
+          / Social Icon
+          .text-right.social-top{style: "display: inline-block"}
             / Social Icon
-            .text-right.social-top{style: "display: inline-block"}
-              / Social Icon
-              = render 'layouts/social_media'
+            = render 'layouts/social_media'
 
-        .container
-          = image_tag "logo.png", class: 'logo'
-          / Nav
-          %nav
-            %ul#ownmenu.ownmenu
-              %li
-                = link_to "Home", root_path
-              %li
-                = link_to "Our Packages", services_path
-              %li
-                = link_to "Contact Us", contact_path
-              %li
-                = link_to "Galleries", galleries_path
-          -#.col-md-2
-          -#  = link_
-          -#  %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
-    / End Header
+      .container
+        = image_tag "logo.png", class: 'logo'
+        / Nav
+        %nav
+          %ul#ownmenu.ownmenu
+            %li
+              = link_to "Home", root_path
+            %li
+              = link_to "Our Packages", services_path
+            %li
+              = link_to "Contact Us", contact_path
+            %li
+              = link_to "Galleries", galleries_path
+        -#.col-md-2
+        -#  = link_
+        -#  %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
 
 
-    - flash.each do |key, value|
-      %div{:id => "card-alert", :class => "card #{key}"}
-        .card-content.white-text
-          = value
-          %button.close.white-text{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-            %span.white-text{"aria-hidden" => "true", :onclick => "this.parentElement.parentElement.style.display='none';"} ×
+  - flash.each do |key, value|
+    %div{:id => "card-alert", :class => "card #{key}"}
+      .card-content.white-text
+        = value
+        %button.close.white-text{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+          %span.white-text{"aria-hidden" => "true", :onclick => "this.parentElement.parentElement.style.display='none';"} ×
 
-    = yield
+  = yield
 
 
 
@@ -92,6 +91,8 @@
 
   ga('create', 'UA-73555706-2', 'auto');
   ga('send', 'pageview');
+
+  $(".sticky").sticky({topSpacing:0});
 
   var path = window.location.pathname;
   $('#ownmenu li a[href="' + path + '"]').parent().addClass('active');

@@ -11,13 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require bootstrap-sprockets
 //= require materialize-sprockets
 //= require jquery_ujs
 //= stub upload-image
 //= require turbolinks
-//= require jquery-ui
 //= require own-menu
 //= require jquery.raty
-//= require main.js
 // require_tree .

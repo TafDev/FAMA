@@ -8,6 +8,10 @@
             %h3.white-text.font-bold #{image.title}
             %h5.light.white-text.text-lighten-3 #{image.description}
             %p #{image.small_print}
-            -#= link_to "Get in touch", contact_path, class: "btn btn-info"
 
-
+:javascript
+  $(document).ready(function () {
+    $('.slider').slider({
+    height: "600"
+   });
+  });
