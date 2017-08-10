@@ -8,6 +8,8 @@
     = csrf_meta_tags
     %script{:src => "https://widget.cloudinary.com/global/all.js", :type => "text/javascript"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
 
 
     %link(href="/favicon.ico" rel="shortcut icon")
@@ -67,7 +69,6 @@
             %span.white-text{"aria-hidden" => "true", :onclick => "this.parentElement.parentElement.style.display='none';"} ×
 
     = yield
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
 
 

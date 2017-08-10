@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= stub upload-image
 //= require turbolinks
-//= require lightbox
 //= require own-menu
-//= require_tree .
+//= require jquery.raty
+//= require main.js
+// require_tree .
