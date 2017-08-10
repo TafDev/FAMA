@@ -9,6 +9,7 @@
     %script{:src => "https://widget.cloudinary.com/global/all.js", :type => "text/javascript"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
 
+
     %link(href="/favicon.ico" rel="shortcut icon")
 %body
   / LOADER
@@ -24,41 +25,39 @@
     %header.header.coporate-header
       .sticky
         .top-bar
-          .container
-            .col-md-6
-              %ul.row
-                %li.margin-right-20
-                  %p
-                    %i.fa.fa-envelope-o.margin-right-10>
-                      enquiries@famaphotobooths.com
-                %li.margin-right-20
-                  %p
-                    %i.fa.fa-phone.margin-right-10
-                      +447500946019
+          .container.center-align
+            %ul.row{style: "display: inline-block"}
+              %li.margin-right-20
+                %p
+                  %i.fa.fa-envelope-o.margin-right-10>
+                    enquiries@famaphotobooths.com
+              %li.margin-right-20
+                %p
+                  %i.fa.fa-phone.margin-right-10
+                    +447500946019
             / Social Icon
-            .col-md-6.text-right.social-top
+            .text-right.social-top{style: "display: inline-block"}
               / Social Icon
               = render 'layouts/social_media'
 
         .container
-          .col-md-3
-            = image_tag "logo.png", class: 'logo'
+          = image_tag "logo.png", class: 'logo'
           / Nav
-          .col-md-7
-            %nav
-              %ul#ownmenu.ownmenu
-                %li
-                  = link_to "Home", root_path
-                %li
-                  = link_to "Our Packages", services_path
-                %li
-                  = link_to "Contact Us", contact_path
-                %li
-                  = link_to "Galleries", galleries_path
+          %nav
+            %ul#ownmenu.ownmenu
+              %li
+                = link_to "Home", root_path
+              %li
+                = link_to "Our Packages", services_path
+              %li
+                = link_to "Contact Us", contact_path
+              %li
+                = link_to "Galleries", galleries_path
           -#.col-md-2
           -#  = link_
           -#  %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
     / End Header
+
 
     - flash.each do |key, value|
       %div{:id => "card-alert", :class => "card #{key}"}
@@ -68,8 +67,8 @@
             %span.white-text{"aria-hidden" => "true", :onclick => "this.parentElement.parentElement.style.display='none';"} ×
 
     = yield
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
 
 / Footer
@@ -93,4 +92,5 @@
   ga('create', 'UA-73555706-2', 'auto');
   ga('send', 'pageview');
 
-
+  var path = window.location.pathname;
+  $('#ownmenu li a[href="' + path + '"]').parent().addClass('active');

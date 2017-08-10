@@ -282,7 +282,7 @@ header nav .ownmenu ul.dropdown .indicator {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
     }
-    &:hover > a {
+    &:hover {
       color: #e4a913 !important;
     }
     ul.dropdown.left {
@@ -1415,6 +1415,14 @@ input {
   .owl-video-frame {
     position: relative;
     z-index: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top-bar {
+    display: none;
+  }
+  .logo {
+
   }
 }
 

@@ -17,4 +17,5 @@
 //= stub upload-image
 //= require turbolinks
 //= require lightbox
+//= require own-menu
 //= require_tree .
