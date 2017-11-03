@@ -11,5 +11,4 @@ $(document).ready(function () {
       sources: ['local', 'url', 'camera', 'facebook', 'dropbox']
     },
   function(error, result) { console.log(error, result) });
-
 });

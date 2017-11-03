@@ -3265,9 +3265,9 @@ textarea.materialize-textarea {
 
 }
 
-#contact_form li input {
-  color: #aaa;
-}
+//#contact_form li input {
+//  color: white;
+//}
 
 .paypal {
   cursor: pointer;
@@ -3277,8 +3277,14 @@ textarea.materialize-textarea {
   color: #f34580
 }
 
-.card .card-content {
-  padding: 0;
-  padding-left: 1em;
-  padding-bottom: 1em;
+//.card .card-content {
+//  padding: 0;
+//  padding-left: 1em;
+//  padding-bottom: 1em;
+//}
+
+.thumbnail {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.23);
+  }
 }

@@ -32,7 +32,10 @@ class GalleriesController < ApplicationController
   end
 
   def destroy
-
+    @gallery = Gallery.find(params[:id])
+    @gallery.destroy
+    redirect_to galleries_path
+    flash[:pink] = "Gallery has been removed"
   end
 
   private

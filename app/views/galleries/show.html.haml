@@ -15,6 +15,8 @@
       .row
         - @gallery.gallery_images.each do |img|
           .col-md-3.col-sm-4.col-xs-12
-            = link_to(image_tag(img.image.url(:thumb), class: "img-responsive thumbnail"), image_path(img.image.url(:original)), data: { lightbox: "example-set"})
+            = link_to(image_tag(img.image.url(:thumb), class: "img-responsive thumbnail img-style"), image_path(img.image.url(:original)), data: { lightbox: "example-set"})
+            - if admin_user_signed_in?
+              = link_to "remove image", gallery_gallery_image_path(gallery_id: @gallery.id, id: img.id), method: :delete, class: "remove-image white-text", remote: true
 
 = javascript_include_tag "lightbox"

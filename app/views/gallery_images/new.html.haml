@@ -1,6 +1,7 @@
 -#= provide(:description, 'Contact Famaphotobooths for any enquiries')
 -#= provide(:keywords, 'Contact us, photobooths, events, photobooth, affordable, occasion')
 / Contact
+%script{:src => "//widget.cloudinary.com/global/all.js", :type => "text/javascript"}
 .contact#contact.style-3.padding-top-10.padding-bottom-80
   .container
     .heading-block.text-center.margin-bottom-80
@@ -14,19 +15,19 @@
       #contact_form.contact-form
         = form_for [@gallery, @gallery_image] do |f|
           .col-md-12
-            %li
-              = f.file_field :image, id: "upload_widget_opener",  multiple: true
-
+            %li.uploader
+              = f.file_field :image, multiple: true
+              %br
               = f.submit "Add Images to Gallery", class: "btn"
 
+:javascript
+  $(document).ready(function () {
+    $('#gallery_image_image').cloudinary_upload_widget(
+      { cloud_name: 'dotgbvb4d',
+        upload_preset: 'znbq25is',
+        sources: ['local', 'url', 'camera', 'facebook', 'dropbox']
+      },
+    function(error, result) { console.log(error, result) });
+  });
 
--#:javascript
--#  document.getElementById("upload_widget_opener").addEventListener("click", function() {
--#    cloudinary.openUploadWidget({
--#      cloud_name: 'dotgbvb4d',
--#      upload_preset: 'znbq25is',
--#      sources: ['local', 'url', 'camera', 'facebook', 'dropbox']
--#
--#    },
--#      function(error, result) { console.log(error, result) });
--#  }, false);
+

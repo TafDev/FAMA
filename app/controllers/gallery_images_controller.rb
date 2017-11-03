@@ -21,4 +21,12 @@ class GalleryImagesController < ApplicationController
     end
   end
 
+  def destroy
+    @image = GalleryImage.find(params[:id])
+    @image.destroy
+
+    respond_to do |format|
+      format.js {render :layout => false}
+    end
+  end
 end
