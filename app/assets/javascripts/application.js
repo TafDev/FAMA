@@ -17,6 +17,8 @@
 //= require jquery_ujs
 //= stub upload-image
 //= require turbolinks
+//= require main
+//= require owl.carousel
 //= require own-menu
 //= require jquery.raty
 // require_tree .

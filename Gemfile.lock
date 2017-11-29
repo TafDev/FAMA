@@ -223,6 +223,8 @@ GEM
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
+    owlcarousel-rails (1.1.3.3)
+      jquery-rails
     pandoc-ruby (2.0.1)
     pg (0.20.0)
     polyamorous (1.3.1)
@@ -386,6 +388,7 @@ DEPENDENCIES
   mail_form
   material_icons
   materialize-sass
+  owlcarousel-rails
   pandoc-ruby
   pg (~> 0.18)
   pry-byebug

@@ -1327,6 +1327,9 @@ header .is-sticky .sticky nav li a {
     //padding-bottom: 50px;
     padding: 6em;
   }
+  .stars {
+    color: gold;
+  }
   .avatar {
     width: 130px;
     height: 130px;
@@ -3287,4 +3290,9 @@ textarea.materialize-textarea {
   &:hover {
     background-color: rgba(0, 0, 0, 0.23);
   }
+}
+
+.slider .slides li img {
+  width:640px;
+  height:360px;
 }

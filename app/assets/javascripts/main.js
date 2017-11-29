@@ -11,14 +11,32 @@ $(".sticky").sticky({topSpacing:0});
 /*-----------------------------------------------------------------------------------*/
 /* 	SINGLE SLIDE
 /*-----------------------------------------------------------------------------------*/
-$('.single-slides').owlCarousel({
+$('.owl-carousel').owlCarousel({
 	items : 1,
-	autoplay:true,
-	singleItem	: true,
-	navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+  loop : true,
+  autoPlay: true,
+	// singleItem	: true,
+	navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 	lazyLoad:true,
 	nav: true,
-	animateOut: 'fadeOut'
+  slideSpeed : 2000,
+  autoplayTimeout:1000,
+  animateOut: 'fadeOut',
+  responsive:{
+    0:{
+      items:1,
+      nav:true
+    },
+    600:{
+      items:3,
+      nav:false
+    },
+    1000:{
+      items:5,
+      nav:true,
+      loop:false
+    }
+  }
 });
 
 $('.slider').slider({

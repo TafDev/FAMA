@@ -14,7 +14,7 @@
         = link_to "View Packages", services_path, class: "waves-effect waves-light btn btn-white margin-right-20 margin-top-50"
 
     .col-md-8
-      .single-slides
+      .owl-carousel
         / Slider item
         - @reviews.each do |review|
           .item
@@ -29,3 +29,5 @@
             %h6
               = review.name
 
+-#:javascript
+-#  $(".owl-carousel").owlCarousel();
