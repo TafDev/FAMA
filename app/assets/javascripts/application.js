@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery-ui
 //= require bootstrap-sprockets
 //= require materialize-sprockets
 //= require jquery_ujs
+//= require jquery-ui
 //= stub upload-image
 //= require turbolinks
 //= require main
