@@ -1,17 +1,35 @@
-%section.home-slider#home
-  .slider
-    %ul.slides
-      - @homepage_images.each do |image|
-        %li
+-#%section.home-slider#home
+-#  .slider
+-#    %ul.slides
+-#      - @homepage_images.each do |image|
+-#        %li
+-#          = image_tag(image.image.url)
+-#          .caption.center-align
+-#            %h3.white-text.font-bold #{image.title}
+-#            %h5.light.white-text.text-lighten-3 #{image.description}
+-#            %p #{image.small_print}
+
+%section
+  #myCarousel.carousel.slide{"data-ride" => "carousel"}
+    / Indicators
+    %ol.carousel-indicators
+      - @homepage_images.each_with_index do |image, index|
+        %li{"data-target"=>"#myCarousel", "data-slide-to"=>index, :class=> index == 0 ? 'active' : ''}
+
+    / Wrapper for slides
+    .carousel-inner
+      - @homepage_images.each_with_index do |image, index|
+        .item{:class => index == 0 ? 'active' : ''}
           = image_tag(image.image.url)
-          .caption.center-align
+          .carousel-caption
             %h3.white-text.font-bold #{image.title}
             %h5.light.white-text.text-lighten-3 #{image.description}
             %p #{image.small_print}
 
-:javascript
-  $(document).ready(function () {
-    $('.slider').slider({
-    height: "600"
-   });
-  });
+        / Left and right controls
+        %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+          %span.glyphicon.glyphicon-chevron-left
+          %span.sr-only Previous
+        %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+          %span.glyphicon.glyphicon-chevron-right
+          %span.sr-only Next

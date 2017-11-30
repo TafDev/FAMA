@@ -3296,3 +3296,14 @@ textarea.materialize-textarea {
   width:640px;
   height:360px;
 }
+
+.carousel-caption {
+  text-shadow: 0 5px 2px rgba(0, 0, 0, 0.8);
+  height: 100%;
+  h3 {
+    font-size: 6em;
+  }
+  h5 {
+    font-size: 3em;
+  }
+}
