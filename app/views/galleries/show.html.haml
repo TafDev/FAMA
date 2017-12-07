@@ -1,3 +1,5 @@
+-#= javascript_include_tag "lightbox"
+
 .contact#contact.style-3.padding-top-10.padding-bottom-80
   .container
     .heading-block.text-center.margin-bottom-20
@@ -18,5 +20,3 @@
             = link_to(image_tag(img.image.url(:thumb), class: "img-responsive thumbnail img-style"), image_path(img.image.url(:original)), data: { lightbox: "example-set"})
             - if admin_user_signed_in?
               = link_to "remove image", gallery_gallery_image_path(gallery_id: @gallery.id, id: img.id), method: :delete, class: "remove-image white-text", remote: true
-
-= javascript_include_tag "lightbox"
