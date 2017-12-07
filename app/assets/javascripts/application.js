@@ -15,6 +15,7 @@
 //= require materialize-sprockets
 //= require jquery_ujs
 //= require jquery-ui
+//= require lightbox
 //= stub upload-image
 //= require turbolinks
 //= require main

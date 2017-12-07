@@ -40,6 +40,8 @@ gem 'delayed_job_active_record'
 gem 'carrierwave'
 gem 'owlcarousel-rails'
 gem 'cloudinary'
+gem 'lightbox2-rails'
+
 
 group :development, :test do
   gem "letter_opener"
