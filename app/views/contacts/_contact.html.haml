@@ -16,8 +16,8 @@
         %i.fa.fa-paper-plane-o>
         Thank You. Your Message has been Submitted
       / FORM
-      #contact_form.contact-form
-        = form_for @contact do |f|
+      %div
+        = form_for @contact, class: "form-group" do |f|
           = notice
           = @contact.errors.full_messages.join(', ')
           = f.hidden_field :nickname
@@ -25,20 +25,20 @@
           .col-md-12
             .col-sm-6
               %li
-                = f.text_field :name, placeholder: "Full Name", class: "", required: true
+                = f.text_field :name, placeholder: "Full Name", class: "form-control", required: true
               %li
-                = f.email_field :email, placeholder: "Email", class: "", required: true
+                = f.email_field :email, placeholder: "Email", class: "form-control", required: true
               %li
-                = f.number_field :phone, placeholder: "Phone Number", class: ""
+                = f.number_field :phone, placeholder: "Phone Number", class: "form-control"
               %li
-                = f.text_field :date, class: "datepicker ", placeholder: "Date of your Event"
+                = f.text_field :date, class: "form-control datepicker ", placeholder: "Date of your Event"
             .col-sm-6
               %li
-                = f.select :occasion, options_for_select(Contact::OCCASIONS), :include_blank => "Select Your Occasion"
+                = f.select(:occasion, options_for_select(Contact::OCCASIONS), {:include_blank => "Select Your Occasion"}, {class: "fc form-control"})
               %li
-                = f.select :subject, options_for_select(Contact::SUBJECTS), :include_blank => "Package Type", class: ""
+                = f.select(:subject, options_for_select(Contact::SUBJECTS), {:include_blank => "Package Type"}, {class: "fc form-control"})
               %li
-                = f.text_area :message, placeholder: "Message", class: "", required: true
+                = f.text_area :message, placeholder: "Message", class: "form-control", required: true
             %li.col-sm-12
               = f.submit "Send", class: "btn"
 
