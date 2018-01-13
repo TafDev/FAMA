@@ -23,13 +23,13 @@ class TransactionsController < ApplicationController
         business:'chombot-facilitator@hotmail.com',
         cmd: '_xclick',
         upload: 1,
-        notify_url: 'http://5345f480.ngrok.io/notify',
+        notify_url: 'https://www.famaphotobooths.com/notify',
         currency_code: 'GBP',
         amount: @price,
         item_name: @product.name,
         item_number: @tx.id,
         quantity: '1',
-        return: 'http://5345f480.ngrok.io/thank_you'
+        return: 'https://www.famaphotobooths.com/thank_you'
       }
       redirect_to "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query
     else
