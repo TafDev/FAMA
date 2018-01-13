@@ -1,51 +1,71 @@
-.contact#contact.style-3.padding-top-10.padding-bottom-80
+.padding-top-10.padding-bottom-80
   .container
     .heading-block.text-center.margin-bottom-80
-      %h3 Book your #{@product.name.downcase.capitalize} Package
+      %h3 Purchase your #{@product.name.downcase.capitalize} Package
       %hr/
       %span.margin-top-20
         If you have any questions regarding any of our packages or want to make an enquiry please fill out the form and we will get back to you as fast as we can
         %strong or you can give us a call at +447500946019
     / Form
-    .contact-right.padding-top-30.padding-left-30
+    .col-md-6.contact-right.padding-top-30.padding-left-30
       / Success Msg
       #contact_message.success-msg
         %i.fa.fa-paper-plane-o>
         Thank You. Your Message has been Submitted
       / FORM
-      #contact_form.contact-form
-        = form_for [@product, @transaction] do |f|
+      = form_for [@product, @transaction], class: "form-group" do |f|
+        .row
           .col-md-12
-            .row
-              .col-md-6
-                %li
-                  = f.text_field :date, class: "datepicker", placeholder: "Select Date", readonly: "true"
-              .col-md-6
-                %li
-                  = f.text_field :time, :ignore_date => true, placeholder: "Start Time"
-            .row
-              .col-md-12
-                %li
-                  = f.text_field :first_name, class: "", placeholder: "First Name"
-                %li
-                  = f.text_field :middle_name, class: "", placeholder: "Middle Name (Optional)"
-                %li
-                  = f.text_field :last_name, class: "", placeholder: "Last Name"
-                %li
-                  = f.email_field :email, class: "", placeholder: "Email"
-                %li
-                  = f.number_field :phone_number, class: "", placeholder: "Phone Number"
-                %li
-                  = f.text_area :notes, class: "", placeholder: "Notes (Optional)"
-                %li
-                  = f.text_field :postcode, class: "", placeholder: "Postcode"
-                %li
-                  = f.text_field :address, class: "", placeholder: "Address (optional)"
+            %li
+            = f.text_field :date, class: "datepicker form-control", placeholder: "Select Date"
+            %li
+              = f.text_field :time, :ignore_date => true, placeholder: "Start Time", class: "form-control"
+            %li
+              = f.text_field :first_name, class: "form-control", placeholder: "First Name"
+            %li
+              = f.text_field :middle_name, class: "form-control", placeholder: "Middle Name (Optional)"
+            %li
+              = f.text_field :last_name, class: "form-control", placeholder: "Last Name"
+            %li
+              = f.email_field :email, class: "form-control", placeholder: "Email"
+            %li
+              = f.number_field :phone_number, class: "form-control", placeholder: "Phone Number"
+            %li
+              = f.text_area :notes, class: "form-control", placeholder: "Notes (Optional)"
+            %li
+              = f.text_field :postcode, class: "form-control", placeholder: "Postcode"
+            %li
+              = f.text_field :address, class: "form-control", placeholder: "Address (optional)"
 
-            = f.hidden_field :payment_type, value: "PayPal"
-            = f.hidden_field :product_id, value: @product.id
+        = f.hidden_field :payment_type, value: "PayPal"
+        = f.hidden_field :product_id, value: @product.id
 
-            = f.submit "Secure Checkout with PayPal", class: "btn"
+        -#= f.submit "Secure Checkout with PayPal", class: "btn"
+        %button.paypal-button
+          %span.paypal-button-title
+            Buy now with
+          %span.paypal-logo
+            %i Pay#{content_tag(:i, "Pal")}
+            %i
+
+    .col-md-6
+      .panel.panel-default
+        .panel-body
+          %h1 Your Order
+          %hr
+          .row
+            .col-md-6
+              #{@product.name.downcase.capitalize} Package
+            .col-md-6
+              £
+              = @transaction.amount.to_s.gsub(/(\.)0+$/, '')
+          %hr
+          .row
+            .col-md-6
+              %b Total
+            .col-md-6
+              £
+              = @transaction.amount.to_s.gsub(/(\.)0+$/, '')
 
 
 

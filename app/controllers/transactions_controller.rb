@@ -10,7 +10,7 @@ class TransactionsController < ApplicationController
   end
 
   def new
-    @transaction = Transaction.new
+    @transaction = Transaction.new(amount: params[:amount])
     @product = Product.find(params[:product_id])
   end
 
@@ -24,6 +24,7 @@ class TransactionsController < ApplicationController
         cmd: '_xclick',
         upload: 1,
         notify_url: 'http://5345f480.ngrok.io/notify',
+        currency_code: 'GBP',
         amount: @price,
         item_name: @product.name,
         item_number: @tx.id,

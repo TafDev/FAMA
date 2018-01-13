@@ -3247,25 +3247,33 @@ input[type=search],
 textarea.materialize-textarea {
 
   // General Styles
-  background-color: transparent;
-  border: 1px solid #aaaaaa;
+  //background-color: transparent;
+  //border: 1px solid #aaaaaa;
   //border-bottom: #aaaaaa;
-  border-radius: 0;
-  outline: none;
-  height: $input-height;
-  width: 100%;
-  font-size: $input-font-size;
-  margin: $input-margin;
-  padding: $input-padding;
+  //border-radius: 0;
+  //outline: none;
+  //height: 3rem;
+  //width: 100%;
+  //font-size: 1rem;
+  //margin: 0 0 20px 0;
+  //padding: 0;
   //box-shadow: none;
-  box-sizing: content-box;
-  transition: $input-transition;
+  //box-sizing: content-box;
+  //transition: all .3s;
 }
 
 .select-wrapper input.select-dropdown {
   border: 1px solid #aaaaaa;
+}
 
-
+.hr{
+  border:         none;
+  border-left:    1px solid hsl(0, 0%, 62%);
+  height:         100vh;
+  width:          1px;
+}
+.form-control {
+  margin-bottom: 1em;
 }
 
 //#contact_form li input {
@@ -3292,13 +3300,36 @@ textarea.materialize-textarea {
   }
 }
 
-.carousel {
-  width: 100vw;
-  height: 80vh;
+.grey-bg {
+  background-color: #9f9f9f;
 }
 
-.carousel-inner {
-  max-height: 100%;
+#myCarousel {
+  .carousel {
+    width: 100vw;
+    height: 80vh;
+  }
+  .carousel-inner {
+    max-height: 100%;
+  }
+  .carousel-caption {
+    text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
+    height: 100%;
+    h3 {
+      font-size: 4em;
+    }
+    h5 {
+      font-size: 3em;
+    }
+  }
+}
+
+
+#reviewCarousel {
+  .carousel {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .slider .slides li img {
@@ -3306,13 +3337,3 @@ textarea.materialize-textarea {
   height:360px;
 }
 
-.carousel-caption {
-  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.8);
-  height: 100%;
-  h3 {
-    font-size: 4em;
-  }
-  h5 {
-    font-size: 3em;
-  }
-}
