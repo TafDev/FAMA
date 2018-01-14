@@ -19,7 +19,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'haml-rails'
 gem 'html2haml'
-gem 'bootstrap-sass', '~> 3.3.6'
+# gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 gem 'font-awesome-rails'
 gem 'materialize-sass'
@@ -41,6 +41,8 @@ gem 'carrierwave'
 gem 'owlcarousel-rails'
 gem 'cloudinary'
 gem 'lightbox2-rails'
+gem 'bootstrap', '~> 4.0.0.beta3'
+
 
 
 group :development, :test do
