@@ -62,6 +62,8 @@ group :test do
 end
 
 group :development do
+  gem 'capistrano3-puma'
+  gem 'capistrano-rvm'
   gem 'capistrano', '~> 3.6'
   gem 'capistrano-rails', '~> 1.2'
   gem 'web-console', '>= 3.3.0'

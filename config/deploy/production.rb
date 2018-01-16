@@ -10,7 +10,9 @@ set :stage, :production
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 # server '160.153.237.214', user: 'fama', roles: %w{app db web}
-server '172-31-22-225', user: 'deploy', roles: %w{web app db}
+# server '172.31.22.225', user: 'deploy', roles: %w{web app db}
+# server '172.31.24.225', port: 22, user: 'deploy', roles: [:web, :app, :db], primary: true
+server 'ec2-35-176-214-189.eu-west-2.compute.amazonaws.com', user: 'deploy', roles: %w{web app}
 
 
 # role-based syntax
