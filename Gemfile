@@ -44,6 +44,8 @@ gem 'lightbox2-rails'
 gem 'bootstrap'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'therubyracer'
+gem 'rvm-capistrano'
+
 
 group :development, :test do
   gem "letter_opener"
