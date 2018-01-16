@@ -7,25 +7,26 @@
 
   / Slider
   .col-md-12.purple-bg
-    .col-md-4
-      .pink-bg.padding-left-40.padding-right-40.padding-top-80.padding-bottom-80
-        %h6.text-uppercase.text-white.letter-space-2.margin-bottom-40.font-16px.font-normal What our clients think
-        %p.text-white.line-height-28 We are not just here for the business, we are here to make your event a success and our clients agree that we do only our absolute best
-        = link_to "View Packages", services_path, class: "waves-effect waves-light btn btn-white margin-right-20 margin-top-50"
+    .row
+      .col-md-4
+        .pink-bg.padding-left-40.padding-right-40.padding-top-80.padding-bottom-80
+          %h6.text-uppercase.text-white.letter-space-2.margin-bottom-40.font-16px.font-normal What our clients think
+          %p.text-white.line-height-28 We are not just here for the business, we are here to make your event a success and our clients agree that we do only our absolute best
+          = link_to "View Packages", services_path, class: "waves-effect waves-light btn btn-white margin-right-20 margin-top-50"
 
-    .col-md-8
-      .owl-carousel
-        / Slider item
-        - @reviews.each do |review|
-          .item
-            .stars
-              - review.star.times do
-                %i.fa.fa-star
+      .col-md-8
+        .owl-carousel
+          / Slider item
+          - @reviews.each do |review|
+            .item
+              .stars
+                - review.star.times do
+                  %i.fa.fa-star
 
-            %h6.u-h3
-              = review.title
-            %p
-              = review.body
-            %h6
-              = review.name
+              %h6.u-h3
+                = review.title
+              %p
+                = review.body
+              %h6
+                = review.name
 

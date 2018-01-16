@@ -13,18 +13,17 @@
 .col-md-12.padding-top-20.padding-bottom-80{style: "background-color: #383838;"}
   .container
     .row
-      - @galleries.each do |gallery|
-        .col-sm-4.col-xs-12
-          .col.s12
-            .card
-              .card-image
-                = link_to gallery_path(gallery) do
-                  = image_tag gallery.cover_photo, class: "thumbnail"
-              .card-content
-                %p
-                  = gallery.title
+      .card-deck
+        - @galleries.each do |gallery|
+          .card{:style => "width: 18rem;"}
+            .card-img-top
+              = link_to gallery_path(gallery) do
+                = image_tag gallery.cover_photo, class: ""
+            .card-body
+              %h5.card-title #{gallery.title}
+              %hr
               .card-action
                 = link_to "View Gallery", gallery_path(gallery)
-              - if admin_user_signed_in?
-                .card-action
+                - if admin_user_signed_in?
+                  .card-action
                   = link_to "Delete Gallery", gallery_path(gallery), method: :delete, data: {confirm: "Are you sure? You will also delete all the images within this gallery. This action cannot be undone"}

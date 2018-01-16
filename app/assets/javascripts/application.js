@@ -14,11 +14,9 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
-// require bootstrap-sprockets
-//= require materialize-sprockets
+//= require lightbox-bootstrap
 //= require jquery_ujs
 //= require jquery-ui
-//= require lightbox
 //= stub upload-image
 //= require turbolinks
 //= require main
@@ -26,4 +24,6 @@
 //= require own-menu
 //= require jquery.raty
 // require_tree .
+
+
 

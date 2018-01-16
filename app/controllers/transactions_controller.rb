@@ -20,7 +20,7 @@ class TransactionsController < ApplicationController
     @tx = Transaction.create!(transaction_params.merge(amount: @price))
     if @tx
       values =  {
-        business:'chombot-facilitator@hotmail.com',
+        business:'enquiries@famaphotobooths.com',
         cmd: '_xclick',
         upload: 1,
         notify_url: 'https://www.famaphotobooths.com/notify',

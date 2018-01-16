@@ -9,7 +9,7 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
-# gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml-rails'
 gem 'html2haml'
 # gem 'bootstrap-sass', '~> 3.3.6'
-gem 'sass-rails', '>= 3.2'
+# gem 'sass-rails', '>= 3.2'
 gem 'font-awesome-rails'
 gem 'materialize-sass'
 gem 'material_icons'
@@ -41,7 +41,9 @@ gem 'carrierwave'
 gem 'owlcarousel-rails'
 gem 'cloudinary'
 gem 'lightbox2-rails'
-gem 'bootstrap', '~> 4.0.0.beta3'
+gem 'bootstrap'
+gem 'lightbox-bootstrap-rails', '5.1.0.1'
+
 
 
 

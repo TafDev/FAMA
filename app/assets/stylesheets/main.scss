@@ -259,7 +259,11 @@ span.codedirection { unicode-bidi:bidi-override; direction: rtl; }
     }
   }
 }
-
+.card-deck {
+  img {
+    width: 100%
+  }
+}
 .paypal {
   &-logo {
     font-family: Verdana, Tahoma;
