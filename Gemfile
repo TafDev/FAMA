@@ -43,9 +43,7 @@ gem 'cloudinary'
 gem 'lightbox2-rails'
 gem 'bootstrap'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
-
-
-
+gem 'therubyracer'
 
 group :development, :test do
   gem "letter_opener"
