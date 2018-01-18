@@ -1,4 +1,4 @@
-set :stage, :production
+# set :stage, :production
 
 # server-based syntax
 # ======================
@@ -12,7 +12,6 @@ set :stage, :production
 # server '160.153.237.214', user: 'fama', roles: %w{app db web}
 # server '172.31.22.225', user: 'deploy', roles: %w{web app db}
 # server '172.31.24.225', port: 22, user: 'deploy', roles: [:web, :app, :db], primary: true
-server '35.176.214.189', user: 'deploy', roles: %w{web app}
 
 
 # role-based syntax
@@ -20,7 +19,7 @@ server '35.176.214.189', user: 'deploy', roles: %w{web app}
 
 # Defines a role with one or multiple servers. The primary server in each
 # group is considered to be the first unless any hosts have the primary
-# property set. Specify the username and a domain or IP for the server.
+# property set. Specify the deploy and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
 # role :app, %w{deploy@example.com}, my_property: :my_value
@@ -65,3 +64,4 @@ server '35.176.214.189', user: 'deploy', roles: %w{web app}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+#
