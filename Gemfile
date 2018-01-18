@@ -30,9 +30,7 @@ gem 'mail_form'
 gem 'figaro'
 gem 'pandoc-ruby'
 gem 'capistrano3-delayed-job', '~> 1.0'
-gem 'capistrano-passenger'
 gem 'sitemap_generator'
-gem 'capistrano-rbenv', '~> 2.1'
 gem 'geocoder'
 gem 'devise'
 gem 'activeadmin'
@@ -44,7 +42,6 @@ gem 'lightbox2-rails'
 gem 'bootstrap'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'therubyracer'
-gem 'rvm-capistrano'
 
 
 group :development, :test do
@@ -62,10 +59,12 @@ group :test do
 end
 
 group :development do
-  gem 'capistrano3-puma'
-  gem 'capistrano-rvm'
-  gem 'capistrano', '~> 3.6'
-  gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano', '~> 3.7', '>= 3.7.1'
+  gem 'capistrano-rails'
+  gem 'capistrano-passenger', '~> 0.2.0'
+
+# Add this if you're using rbenv
+  gem 'capistrano-rbenv', '~> 2.1'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
