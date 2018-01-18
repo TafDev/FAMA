@@ -29,7 +29,6 @@ gem 'simple-line-icons-rails'
 gem 'mail_form'
 gem 'figaro'
 gem 'pandoc-ruby'
-gem 'capistrano3-delayed-job', '~> 1.0'
 gem 'sitemap_generator'
 gem 'geocoder'
 gem 'devise'
@@ -62,8 +61,8 @@ group :development do
   gem 'capistrano', '~> 3.7', '>= 3.7.1'
   gem 'capistrano-rails'
   gem 'capistrano-passenger', '~> 0.2.0'
-
-# Add this if you're using rbenv
+  gem 'capistrano3-delayed-job', '~> 1.0'
+  # gem 'capistrano-rvm'
   gem 'capistrano-rbenv', '~> 2.1'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
