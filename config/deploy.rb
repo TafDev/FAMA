@@ -7,9 +7,14 @@ set :repo_url, "git@github.com:TafDev/FAMA.git"
 set :deploy_to, '/home/deploy/famaphotobooths'
 
 # set :ssh_options, { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/famaphotobooths.pem) }
-set :default_env, { path: "~/.rbenv/shims:~/.rbenv/bin:$PATH" }
+set :default_env, {
+  path: "~/.rbenv/shims:~/.rbenv/bin:$PATH",
+  AWS_ACCESS_KEY_ID: ENV['AWS_ACCESS_KEY_ID'],
+  AWS_SECRET_ACCESS_KEY: ENV['AWS_SECRET_ACCESS_KEY']
+}
+set :log_level, :debug
 
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml", "config/application.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
 
 # Default branch is :master

@@ -17,6 +17,8 @@
 .byebug_history
 .idea
 
+/bin
+
 # Ignore application configuration
 /config/application.yml
 config/database.yml

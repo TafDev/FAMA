@@ -58,12 +58,11 @@
         -#  %a.waves-effect.waves-ripple.any-help.z-depth-1{:href => "#contact"} Contact
 
 
-  - flash.each do |key, value|
-    %div{:id => "card-alert", :class => "card #{key}"}
-      .card-content.white-text
-        = value
-        %button.close.white-text{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
-          %span.white-text{"aria-hidden" => "true", :onclick => "this.parentElement.parentElement.style.display='none';"} ×
+  #flash-display
+    - flash.each do |type, msg|
+      %div{:class => "alert alert-#{type == :notice ? "success" : type} fadeout", "data-dismiss" => "alert"}
+        %button.close &times;
+        = msg if msg.is_a?(String)
 
   = yield
 
