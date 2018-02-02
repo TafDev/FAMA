@@ -10,7 +10,9 @@ set :deploy_to, '/home/deploy/famaphotobooths'
 set :default_env, {
   path: "~/.rbenv/shims:~/.rbenv/bin:$PATH",
   AWS_ACCESS_KEY_ID: ENV['AWS_ACCESS_KEY_ID'],
-  AWS_SECRET_ACCESS_KEY: ENV['AWS_SECRET_ACCESS_KEY']
+  AWS_SECRET_ACCESS_KEY: ENV['AWS_SECRET_ACCESS_KEY'],
+  SMTP_USERNAME: ENV['SMTP_USERNAME'],
+  SMTP_PASSWORD: ENV['SMTP_PASSWORD']
 }
 set :log_level, :debug
 
