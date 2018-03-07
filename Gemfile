@@ -42,6 +42,7 @@ gem 'lightbox2-rails'
 gem 'bootstrap'
 gem 'lightbox-bootstrap-rails', '5.1.0.1'
 gem 'therubyracer'
+gem 'aws-ses', '~> 0.4.4', require: 'aws/ses'
 
 
 group :development, :test do
