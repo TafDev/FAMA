@@ -33,24 +33,15 @@
                   Photobooth
                 %li.text-justify{class: (p.photobooth_attendant? ? "glyphicon-ok" : "reduced-price")}
                   Photobooth attendant
-                %li.text-justify{class: (p.propbox? ? "glyphicon-ok" : "reduced-price")}
-                  %span.glyphicon
-                  Vibrant and fun propbox
                 %li.text-justify{class: (p.guestbook? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Free guestbook
-                %li.text-justify{class: (p.key_ring? ? "glyphicon-ok" : "reduced-price")}
-                  %span.glyphicon
-                  Option for guests to buy a key ring
-                %li.text-justify{class: (p.usb? ? "glyphicon-ok" : "reduced-price")}
-                  %span.glyphicon
-                  USB with event pictures
+                -#%li.text-justify{class: (p.usb? ? "glyphicon-ok" : "reduced-price")}
+                -#  %span.glyphicon
+                -#  USB with event pictures
                 %li.text-justify{class: (p.public_liability_insurance? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Public Liability Insurance
-                %li.text-justify{class: (p.gif? ? "glyphicon-ok" : "reduced-price")}
-                  %span.glyphicon
-                  GIFs
                 %li.text-justify{class: (p.interactive_touchscreen? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Interactive Touchscreen
@@ -60,6 +51,18 @@
                 %li.text-justify{class: (p.unlimited_visits? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Unlimited visits to the booth
+                %li.text-justify{class: (p.personalised_theme? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Theme/ logo on prints (artwork provided by customer)
+                %li.text-justify{class: (p.propbox? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Vibrant and fun propbox
+                %li.text-justify{class: (p.gif? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  GIFs
+                %li.text-justify{class: (p.key_ring? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Option for guests to buy a key ring
                 %li.text-justify{class: (p.social_media_uploads? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Social Media Uploads
@@ -81,15 +84,13 @@
                 %li.text-justify{class: (p.karaoke? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Karaoke
-                %li.text-justify{class: (p.merryoke? ? "glyphicon-ok" : "reduced-price")}
-                  %span.glyphicon
-                  Merryoke
+                -#%li.text-justify{class: (p.merryoke? ? "glyphicon-ok" : "reduced-price")}
+                -#  %span.glyphicon
+                -#  Merryoke
                 %li.text-justify{class: (p.video_messages? ? "glyphicon-ok" : "reduced-price")}
                   %span.glyphicon
                   Video messages
-                %li.text-justify{class: (p.personalised_theme? ? "glyphicon-ok" : "reduced-price")}
-                  %span.glyphicon
-                  Theme/ logo on prints (artwork provided by customer)
+
                 = link_to "Purchase", new_product_transaction_path(p, amount: @total), class: "btn btn-rose btn-round"
 
 
