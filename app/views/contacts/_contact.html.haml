@@ -27,7 +27,8 @@
               %li
                 = f.text_field :name, placeholder: "Full Name", class: "form-control", required: true
               %li
-                = f.email_field :email, placeholder: "Email", class: "form-control", required: true
+                = f.email_field :user_email, placeholder: "Email", class: "form-control", required: true
+                = f.hidden_field :email, value: "bongai.mlambo@famaphotobooths.com"
               %li
                 = f.number_field :phone, placeholder: "Phone Number", class: "form-control"
               %li

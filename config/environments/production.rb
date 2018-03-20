@@ -88,7 +88,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = {host: "https://famaphotobooths.com"}
-  config.action_mailer.delivery_method = :ses
+  # config.action_mailer.delivery_method = :ses
 
   config.action_mailer.smtp_settings = {
     :address => "email-smtp.eu-west-1.amazonaws.com",

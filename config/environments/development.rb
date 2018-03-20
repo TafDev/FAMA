@@ -26,10 +26,22 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :ses
+
+  # config.action_mailer.smtp_settings = {
+  #   :address => "email-smtp.eu-west-1.amazonaws.com",
+  #   :port => 587,
+  #   :user_name => ENV["SMTP_USERNAME"], #Your SMTP user
+  #   :password => ENV["SMTP_PASSWORD"], #Your SMTP password
+  #   :authentication => :login,
+  #   :enable_starttls_auto => true
+  # }
+
+
+  # config.action_mailer.delivery_method = :letter_opener
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 

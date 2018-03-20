@@ -1,103 +1,96 @@
 = provide(:description, 'FamaPhotobooths offers affordable photobooths with a variety of packages to choose from.')
 = provide(:keywords, 'Packages, photobooths, events, photobooth, affordable, occasion')
 
-%section#services.padding-top-50.padding-bottom-30.light-gray-bg
+.pricing-3.section-gray
+  / HEADING BLOCK
+  .heading-block.text-center
+    %h1 Our Packages
+    %hr/
+    %span.margin-top-20 We offer clients packages customized to their needs or you can choose from one of our 3 set packages with the following services
+
   .container
-    / HEADING BLOCK
-    .heading-block.text-center
-      %h1 Our Packages
-      %hr/
-      %span.margin-top-20 We offer clients packages customized to their needs or you can choose from one of our 3 set packages with the following services
-
-      / ### Pricely Professional Starts Here, Copy Paste Starts Here ###
-    .pricely-chart.pricely-professional
-      %section.pricely-chart-three.col-xs-12
-        %ul.pricely-pro
-          - Product.all.each do |p|
-            %li.pricely-inner.panel-info.col-xs-12.col-md-4
-              %h3.panel-heading
-                %span.pricely-label
-                  = p.name
-                %span.pricely-foreword
-                  = p.period
-                %span.reduced-price
-                  = p.price.to_s.gsub(/(\.)0+$/, '')
-                .pricely-figure
-                  %span.pricely-currency £
-                  %span.pricely-amount
-                    - if p.percent_discount
-                      - @total = p.price_by_percent_discount
-                      = p.price_by_percent_discount.to_s.gsub(/(\.)0+$/, '')
-                    - else
-                      - @total = p.price_by_amount_discount
-                      = p.price_by_amount_discount.to_s.gsub(/(\.)0+$/, '')
-                %span.pricely-button
-                  = link_to "Purchase", new_product_transaction_path(p, amount: @total), class: "btn btn-info"
-
-              %ul.list-group
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.photobooth? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Photobooth
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.photobooth_attendant? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Photobooth attendant
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.propbox? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Vibrant and fun propbox
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.guestbook? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Free guestbook
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.key_ring? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Option for guests to buy a key ring
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.usb? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span USB with event pictures
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.public_liability_insurance? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Public Liability Insurance
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.gif? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span GIFs
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.interactive_touchscreen? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Interactive Touchscreen
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.red_curtain_background? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Red Curtain Background
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.unlimited_visits? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Unlimited visits to the booth
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.social_media_uploads? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Social Media Uploads
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.personalised_messages? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Personalised messages
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.green_screen? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Green Screen Choice with choice of a variety of backgrounds.
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.facial_recognition? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Facial Recognition filters (snapchat style)
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.red_carpet? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Red carpet and luxury rope
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.free_keyrings? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span 5 free key rings and 2 4x6in picture frames.
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.karaoke? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Karaoke
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.merryoke? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Merryoke
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.video_messages? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Video messages
-                %li.list-group-item
-                  %span.glyphicon.right{class: (p.personalised_theme? ? "glyphicon-ok" : "glyphicon-remove x")}
-                  %span Theme/ logo on prints (artwork provided by customer)
+    .row
+      - Product.all.each do |p|
+        .col-md-4
+          .block.block-pricing
+            .table{class: (p.name == "Gold" ? "table-primary" : "")}
+              %h6.category #{p.name} Package
+              -#%span
+              -#  .reduced-price
+              -#    %small> £
+              -#    = p.price.to_s.gsub(/(\.)0+$/, '')
+              %h1.block-caption
+                %small> £
+                - if p.percent_discount
+                  - @total = p.price_by_percent_discount
+                  = p.price_by_percent_discount.to_s.gsub(/(\.)0+$/, '')
+                - else
+                  - @total = p.price_by_amount_discount
+                  = p.price_by_amount_discount.to_s.gsub(/(\.)0+$/, '')
+              = link_to "Purchase", new_product_transaction_path(p, amount: @total), class: "btn btn-rose btn-round"
+              %ul
+                %li.text-justify{class: (p.photobooth? ? "glyphicon-ok" : "reduced-price")}
+                  Photobooth
+                %li.text-justify{class: (p.photobooth_attendant? ? "glyphicon-ok" : "reduced-price")}
+                  Photobooth attendant
+                %li.text-justify{class: (p.propbox? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Vibrant and fun propbox
+                %li.text-justify{class: (p.guestbook? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Free guestbook
+                %li.text-justify{class: (p.key_ring? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Option for guests to buy a key ring
+                %li.text-justify{class: (p.usb? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  USB with event pictures
+                %li.text-justify{class: (p.public_liability_insurance? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Public Liability Insurance
+                %li.text-justify{class: (p.gif? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  GIFs
+                %li.text-justify{class: (p.interactive_touchscreen? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Interactive Touchscreen
+                %li.text-justify{class: (p.red_curtain_background? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Red Curtain Background
+                %li.text-justify{class: (p.unlimited_visits? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Unlimited visits to the booth
+                %li.text-justify{class: (p.social_media_uploads? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Social Media Uploads
+                %li.text-justify{class: (p.personalised_messages? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Personalised messages
+                %li.text-justify{class: (p.green_screen? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Green Screen Choice with choice of a variety of backgrounds.
+                %li.text-justify{class: (p.facial_recognition? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Facial Recognition filters (snapchat style)
+                %li.text-justify{class: (p.red_carpet? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Red carpet and luxury rope
+                %li.text-justify{class: (p.free_keyrings? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  5 free key rings and 2 4x6in picture frames.
+                %li.text-justify{class: (p.karaoke? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Karaoke
+                %li.text-justify{class: (p.merryoke? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Merryoke
+                %li.text-justify{class: (p.video_messages? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Video messages
+                %li.text-justify{class: (p.personalised_theme? ? "glyphicon-ok" : "reduced-price")}
+                  %span.glyphicon
+                  Theme/ logo on prints (artwork provided by customer)
+                = link_to "Purchase", new_product_transaction_path(p, amount: @total), class: "btn btn-rose btn-round"
 
 
     .heading-block.text-center.padding-top-50
