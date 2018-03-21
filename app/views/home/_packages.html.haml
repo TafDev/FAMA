@@ -13,20 +13,20 @@
       - Product.all.each do |p|
         .col-md-4
           .block.block-pricing
-            .table{class: (p.name == "Gold" ? "table-primary" : "")}
+            .table{class: (p.name == "GOLD" ? "table-primary" : "")}
               %h6.category #{p.name} Package
-              -#%span
-              -#  .reduced-price
-              -#    %small> £
-              -#    = p.price.to_s.gsub(/(\.)0+$/, '')
+              %span
+                %h4.category
+                  .strikethrough-diagonal
+                    %small> £#{p.price.round}
               %h1.block-caption
                 %small> £
                 - if p.percent_discount
                   - @total = p.price_by_percent_discount
-                  = p.price_by_percent_discount.to_s.gsub(/(\.)0+$/, '')
+                  = p.price_by_percent_discount.round
                 - else
                   - @total = p.price_by_amount_discount
-                  = p.price_by_amount_discount.to_s.gsub(/(\.)0+$/, '')
+                  = p.price_by_amount_discount.round
               = link_to "Purchase", new_product_transaction_path(p, amount: @total), class: "btn btn-rose btn-round"
               %ul
                 %li.text-justify{class: (p.photobooth? ? "glyphicon-ok" : "reduced-price")}

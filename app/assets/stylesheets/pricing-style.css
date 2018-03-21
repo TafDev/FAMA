@@ -120,7 +120,7 @@ Table of Contents End
 }
 
 .block-pricing .block-caption {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 .block-pricing .table {
@@ -215,7 +215,7 @@ Table of Contents End
 }
 
 .block-pricing .block-caption {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 .block [class*="table-"] h1 small,
