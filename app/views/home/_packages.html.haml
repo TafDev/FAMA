@@ -13,7 +13,7 @@
       - Product.all.each do |p|
         .col-md-4
           .block.block-pricing
-            .table{class: (p.name == "GOLD" ? "table-primary" : "")}
+            .table{class: (p.name.match(/gold/i) ? "table-primary" : "")}
               %h6.category #{p.name} Package
               %span
                 %h4.category
