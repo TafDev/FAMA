@@ -15,19 +15,20 @@
     .row
       .card-deck
         - @galleries.each do |gallery|
-          .card{:style => "width: 18rem;"}
-            .card-img-top
-              = link_to gallery_path(gallery) do
-                - if !gallery.cover_photo.nil?
-                  = image_tag gallery.cover_photo, class: ""
-                - else
-                  = image_tag "logo.png"
+          .col-md-4.col-sm-6.col-xs-12
+            .card
+              .card-img-top
+                = link_to gallery_path(gallery) do
+                  - if !gallery.cover_photo.nil?
+                    = image_tag gallery.cover_photo, class: ""
+                  - else
+                    = image_tag "logo.png"
 
-            .card-body
-              %h5.card-title #{gallery.title}
-              %hr
-              .card-action
-                = link_to "View Gallery", gallery_path(gallery)
-                - if admin_user_signed_in?
-                  .card-action
-                  = link_to "Delete Gallery", gallery_path(gallery), method: :delete, data: {confirm: "Are you sure? You will also delete all the images within this gallery. This action cannot be undone"}
+              .card-body
+                %h5.card-title #{gallery.title}
+                %hr
+                .card-action
+                  = link_to "View Gallery", gallery_path(gallery)
+                  - if admin_user_signed_in?
+                    .card-action
+                    = link_to "Delete Gallery", gallery_path(gallery), method: :delete, data: {confirm: "Are you sure? You will also delete all the images within this gallery. This action cannot be undone"}
