@@ -41,6 +41,6 @@ class GalleriesController < ApplicationController
   private
 
   def gallery_params
-    params.require(:gallery).permit(:title, :description, :date, :cover_date)
+    params.require(:gallery).permit(:title, :description, :date, :cover_photo)
   end
 end

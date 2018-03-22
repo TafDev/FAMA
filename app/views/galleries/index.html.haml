@@ -19,8 +19,9 @@
             .card
               .card-img-top
                 = link_to gallery_path(gallery) do
-                  - if !gallery.cover_photo.nil?
-                    = image_tag gallery.cover_photo, class: ""
+                  - if gallery.cover_photo?
+                    = image_tag(gallery.cover_photo.url(:thumb))
+                    -#= image_tag gallery.cover_photo, class: ""
                   - else
                     = image_tag "logo.png"
 

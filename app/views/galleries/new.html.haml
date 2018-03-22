@@ -20,6 +20,8 @@
               = f.text_field :description, placeholder: "Gallery Description", class: "", required: true
             %li
               = f.text_field :date, class: "datepicker ", placeholder: "Date of Event"
+            %li.uploader
+              = f.file_field :cover_photo
 
               = f.submit "Create Gallery", class: "btn"
 
