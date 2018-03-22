@@ -10,7 +10,7 @@
         .carousel-item{:class => index == 0 ? 'active' : ''}
           = image_tag(image.image.url, class: "d-block w-100")
           .carousel-caption.d-none.d-md-block
-            %h3.white-text.font-bold #{image.title}
+            %h3.font-bold #{image.title}
             %h5.light.white-text.text-lighten-3 #{image.description}
             %p #{image.small_print}
 
