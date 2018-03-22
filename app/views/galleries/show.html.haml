@@ -16,7 +16,7 @@
     .container
       .row
         - @gallery.gallery_images.each do |img|
-          - unless image.nil?
+          - unless img.nil?
             .col-md-3.col-sm-4.col-xs-12
               = link_to image_path(img.image.url(:original)), {"data-toggle" => "lightbox", "data-gallery"=>@gallery.title} do
                 = image_tag(img.image.url(:thumb), class: "img-fluid img-thumbnail")
