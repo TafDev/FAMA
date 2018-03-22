@@ -18,7 +18,7 @@ $('.owl-carousel').owlCarousel({
   loop : true,
   autoPlay: true,
 	// singleItem	: true,
-	navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+	// navText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 	lazyLoad:true,
 	nav: true,
   slideSpeed : 2000,
