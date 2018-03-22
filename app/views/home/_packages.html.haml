@@ -27,6 +27,8 @@
                 - else
                   - @total = p.price_by_amount_discount
                   = p.price_by_amount_discount.round
+                %h5.category
+                  up to #{p.period}
               = link_to "Purchase", new_product_transaction_path(p, amount: @total), class: "btn btn-rose btn-round"
               %ul
                 %li.text-justify{class: (p.photobooth? ? "glyphicon-ok" : "reduced-price")}
