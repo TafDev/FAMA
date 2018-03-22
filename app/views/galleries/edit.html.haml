@@ -1,0 +1,26 @@
+-#= provide(:description, 'Contact Famaphotobooths for any enquiries')
+-#= provide(:keywords, 'Contact us, photobooths, events, photobooth, affordable, occasion')
+/ Contact
+.contact#contact.style-3.padding-top-10.padding-bottom-80
+  .container
+    .heading-block.text-center.margin-bottom-80
+      %h3 Create a new Gallery
+      %hr/
+      -#%span.margin-top-20
+      -#  If you have any questions regarding any of our packages or want to make an enquiry please fill out the form and we will get back to you as fast as we can
+      -#  %strong or you can give us a call at +447500946019
+    / Form
+    .contact-right.padding-top-30.padding-left-30
+      #contact_form.contact-form
+        = form_for @gallery do |f|
+          .col-md-12
+            %li
+              = f.text_field :title, placeholder: "Gallery Title", class: "", required: true
+            %li
+              = f.text_field :description, placeholder: "Gallery Description", class: "", required: true
+            %li
+              = f.text_field :date, class: "datepicker ", placeholder: "Date of Event"
+            %li.uploader
+              = f.file_field :cover_photo
+
+              = f.submit "Update Gallery", class: "btn"

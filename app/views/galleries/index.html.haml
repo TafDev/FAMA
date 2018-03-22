@@ -21,7 +21,6 @@
                 = link_to gallery_path(gallery) do
                   - if gallery.cover_photo?
                     = image_tag(gallery.cover_photo.url(:thumb))
-                    -#= image_tag gallery.cover_photo, class: ""
                   - else
                     = image_tag "logo.png"
 
@@ -32,4 +31,6 @@
                   = link_to "View Gallery", gallery_path(gallery)
                   - if admin_user_signed_in?
                     .card-action
-                    = link_to "Delete Gallery", gallery_path(gallery), method: :delete, data: {confirm: "Are you sure? You will also delete all the images within this gallery. This action cannot be undone"}
+                      = link_to "Edit Gallery", edit_gallery_path(gallery)
+                    .card-action
+                      = link_to "Delete Gallery", gallery_path(gallery), method: :delete, data: {confirm: "Are you sure? You will also delete all the images within this gallery. This action cannot be undone"}

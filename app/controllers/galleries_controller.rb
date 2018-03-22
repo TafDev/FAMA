@@ -13,7 +13,7 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.create(gallery_params)
     if @gallery
       flash[:pink] = "Gallery Created"
-      redirect_to @gallery
+      redirect_to galleries_path
     else
       render :new
     end
@@ -24,11 +24,18 @@ class GalleriesController < ApplicationController
   end
 
   def edit
-
+    @gallery = Gallery.find(params[:id])
   end
 
   def update
-
+    @gallery = Gallery.find(params[:id])
+    if @gallery.update(gallery_params)
+      flash[:pink] = "Gallery Updated"
+      redirect_to galleries_path
+    else
+      flash[:pink] = "Gallery could not be updated"
+      render @gallery
+    end
   end
 
   def destroy
